@@ -145,6 +145,11 @@ module.exports = {
         from: '*',
         to: path.resolve(__dirname, './build/', 'images/'),
       },
+      {
+        context: path.resolve(__dirname, './src/lib/client/static/assets', 'sourcemaps/'),
+        from: '*.map',
+        to: path.resolve(__dirname, 'build/'),
+      },
     ]),
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css',

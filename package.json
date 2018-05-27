@@ -19,7 +19,7 @@
     "port": 8088
   },
   "engines": {
-    "node": "8.9.4",
+    "node": "6.11.1",
     "npm": ">=5.6.0"
   },
   "dependencies": {
