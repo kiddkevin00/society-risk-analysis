@@ -23,18 +23,12 @@
     "npm": ">=5.6.0"
   },
   "dependencies": {
-    "antd": "2.13.8",
-    "axios": "0.16.1",
     "classnames": "2.2.5",
     "compression": "1.7.2",
     "errorhandler": "1.5.0",
     "express": "4.16.3",
-    "flag-icon-css": "2.8.0",
-    "font-awesome": "4.7.0",
-    "google-libphonenumber": "3.0.9",
     "jade": "1.11.0",
     "jquery": ">=1.8.0",
-    "lodash.isequal": "4.5.0",
     "morgan": "1.9.0",
     "node-gyp-install": "2.2.0",
     "promise-polyfill": "6.0.2",
@@ -49,10 +43,7 @@
     "redux": "3.7.2",
     "redux-logger": "3.0.6",
     "redux-thunk": "2.2.0",
-    "serve-favicon": "2.5.0",
-    "universal-cookie": "2.1.2",
-    "uuid": "3.2.1",
-    "world-countries": "1.8.1"
+    "serve-favicon": "2.5.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "3.3.6",

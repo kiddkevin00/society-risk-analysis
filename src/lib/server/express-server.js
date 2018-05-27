@@ -29,9 +29,9 @@ function setupExpressServer(app) {
     etag: true,
     setHeaders(res, filePath) {
       if (env === 'production') {
-        if (filePath.find('.js')) {
+        if (filePath.includes('.js')) {
           res.append('Cache-Control', 'private, max-age=31536000'); // Set for one year
-        } else if (filePath.find('.css') || filePath.find('.map')) {
+        } else if (filePath.includes('.css') || filePath.includes('.map')) {
           res.append('Cache-Control', 'public, max-age=31536000'); // Set for one year
         } else {
           res.append('Cache-Control', 'public, max-age=86400'); // Set for one day
