@@ -36,9 +36,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        include: [
-          path.resolve(__dirname, 'src/'),
-        ],
+        include: [path.resolve(__dirname, 'src/')],
         use: 'babel-loader',
       },
       {
@@ -127,7 +125,9 @@ module.exports = {
       template: path.resolve(__dirname, './src/lib/client/static/templates/', 'index.html'),
       chunksSortMode: 'dependency',
       inject: true,
-      GLOBAL_SETTINGS: JSON.stringify(isDevelopmentEnv ? developmentEnvSetting : productionEnvSetting),
+      GLOBAL_SETTINGS: JSON.stringify(
+        isDevelopmentEnv ? developmentEnvSetting : productionEnvSetting
+      ),
     }),
     new CopyWebpackPlugin([
       {
@@ -136,17 +136,17 @@ module.exports = {
         to: path.resolve(__dirname, './build/', 'settings/'),
       },
       {
-        context: path.resolve(__dirname, './src/lib/client/static/assets', 'js/'),
+        context: path.resolve(__dirname, './src/lib/client/static/assets/', 'js/'),
         from: '*.js',
         to: path.resolve(__dirname, './build/', 'js/'),
       },
       {
-        context: path.resolve(__dirname, './src/lib/client/static/assets', 'images/'),
+        context: path.resolve(__dirname, './src/lib/client/static/assets/', 'images/'),
         from: '*',
         to: path.resolve(__dirname, './build/', 'images/'),
       },
       {
-        context: path.resolve(__dirname, './src/lib/client/static/assets', 'sourcemaps/'),
+        context: path.resolve(__dirname, './src/lib/client/static/assets/', 'sourcemaps/'),
         from: '*.map',
         to: path.resolve(__dirname, 'build/'),
       },

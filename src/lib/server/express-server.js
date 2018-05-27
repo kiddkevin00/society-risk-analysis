@@ -5,7 +5,6 @@ const compression = require('compression');
 const path = require('path');
 const fs = require('fs');
 
-
 function setupExpressServer(app) {
   const env = process.env.NODE_ENV;
 
@@ -25,26 +24,30 @@ function setupExpressServer(app) {
   app.set('views', path.resolve(__dirname, 'views/'));
   app.set('view engine', 'jade');
 
-  app.use(express.static(path.resolve(__dirname, '../../../', 'build/'), {
-    etag: true,
-    setHeaders(res, filePath) {
-      if (env === 'production') {
-        if (filePath.includes('.js')) {
-          res.append('Cache-Control', 'private, max-age=31536000'); // Set for one year
-        } else if (filePath.includes('.css') || filePath.includes('.map')) {
-          res.append('Cache-Control', 'public, max-age=31536000'); // Set for one year
+  app.use(
+    express.static(path.resolve(__dirname, '../../../', 'build/'), {
+      etag: true,
+      setHeaders(res, filePath) {
+        if (env === 'production') {
+          if (filePath.includes('.js')) {
+            res.append('Cache-Control', 'private, max-age=31536000'); // Set for one year
+          } else if (filePath.includes('.css') || filePath.includes('.map')) {
+            res.append('Cache-Control', 'public, max-age=31536000'); // Set for one year
+          } else {
+            res.append('Cache-Control', 'public, max-age=86400'); // Set for one day
+          }
         } else {
-          res.append('Cache-Control', 'public, max-age=86400'); // Set for one day
+          res.append('Cache-Control', 'no-store');
         }
-      } else {
-        res.append('Cache-Control', 'no-store');
-      }
-    },
-  }));
+      },
+    })
+  );
 
   if (env === 'production') {
-    const accessLogStream = fs.createWriteStream(path.resolve(__dirname, '../../../', 'morgan.log'),
-      { flags: 'a' });
+    const accessLogStream = fs.createWriteStream(
+      path.resolve(__dirname, '../../../', 'morgan.log'),
+      { flags: 'a' }
+    );
 
     app.use(morgan('combined', { stream: accessLogStream }));
   }

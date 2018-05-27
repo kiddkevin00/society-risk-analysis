@@ -7,7 +7,7 @@
     "-------------- EXPOSED --------------": "",
     "start": "NODE_ENV=production node --stack-size=65500 src/lib/server/",
     "prepare": "rm -rf build/* && NODE_ENV=production webpack -p",
-    "lint:js": "eslint --format 'node_modules/eslint-friendly-formatter' --ext .js,.jsx src/lib/client/app/ src/lib/server/ src/spec/ bin/ stories/",
+    "lint:js": "eslint --format 'node_modules/eslint-friendly-formatter' --ext .js,.jsx src/lib/client/app/ src/lib/server/ src/spec/ bin/ stories/ webpack.config.js",
     "lint:styles": "stylelint 'src/lib/**/*.scss'",
     "-------------- LOCAL DEV ------------": "",
     "dev": "NODE_ENV=development webpack-dev-server",

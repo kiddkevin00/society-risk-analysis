@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 // Set Node environment default to "development".
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -18,23 +20,27 @@ const port = process.env.PORT || packageJson.config.port;
 
 const webServer = server.listen(port, ip, () => {
   // [TODO] Replaces `console.log()` with a logger module.
-  console.log('Express server listening on port: %d at IP: %s, in %s mode.',
-    webServer.address().port, webServer.address().address, process.env.NODE_ENV);
+  console.log(
+    'Express server listening on port: %d at IP: %s, in %s mode.',
+    webServer.address().port,
+    webServer.address().address,
+    process.env.NODE_ENV
+  );
 });
 
 // [TODO] Cleans up whenever the app crashes.
-process.on('uncaughtException', (err) => {
+process.on('uncaughtException', err => {
   console.log('Crashed..', err);
   process.exit(0);
 });
 // [TODO] Cleans up whenever getting interrupted by an user (ctrl + c).
-process.on('SIGINT', (err) => {
+process.on('SIGINT', err => {
   console.log('Interrupted by an user..', err);
   process.exit(0);
 });
 
 // [TODO] Cleans up whenever getting a default terminate signal.
-process.on('SIGTERM', (err) => {
+process.on('SIGTERM', err => {
   console.log('Got a default terminate signal..', err);
   process.exit(0);
 });

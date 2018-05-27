@@ -2,39 +2,41 @@ const packageJson = require('../../../package.json');
 const errorHandler = require('errorhandler');
 const path = require('path');
 
-
 const serverStartTimestamp = new Date();
 const containerId = process.env.HOSTNAME;
 
 function setupRoutes(app) {
-  app.get('/ping', (req, res) => res.json({
-    uptimeInSec: ((new Date()).getTime() - serverStartTimestamp.getTime()) / 1000,
-    hostname: containerId || 'N/A',
-  }));
-  app.get('/health', (req, res) => res.json({
-    version: packageJson.version,
-    self: {
-      name: packageJson.name,
+  app.get('/ping', (req, res) =>
+    res.json({
+      uptimeInSec: (new Date().getTime() - serverStartTimestamp.getTime()) / 1000,
+      hostname: containerId || 'N/A',
+    })
+  );
+  app.get('/health', (req, res) =>
+    res.json({
       version: packageJson.version,
-      status: 200,
-      serverDateStamp: (new Date()).toString(),
-      hostname: containerId,
-    },
-    dependencies: {
-      http: [],
-    },
-  }));
+      self: {
+        name: packageJson.name,
+        version: packageJson.version,
+        status: 200,
+        serverDateStamp: new Date().toString(),
+        hostname: containerId,
+      },
+      dependencies: {
+        http: [],
+      },
+    })
+  );
 
   // All not-found API endpoints should return an custom 404 page.
-  app.route('/:url(images|js|settings)/*')
-    .get((req, res) => res.render('404', (err) => {
+  app.route('/:url(images|js|settings)/*').get((req, res) =>
+    res.render('404', err => {
       if (err) {
-        return res.status(404)
-          .json(err);
+        return res.status(404).json(err);
       }
-      return res.status(404)
-        .render('404');
-    }));
+      return res.status(404).render('404');
+    })
+  );
 
   // All other endpoints should redirect to the index.html.
   app.use((req, res) => {
