@@ -1,0 +1,40 @@
+{
+  "presets": [
+    ["es2015", { "modules": false }],
+    "es2016",
+    "es2017",
+    "react",
+    ["env", {
+      "targets": {
+        "node": "current"
+       }
+    }]
+  ],
+  "sourceMap":"inline",
+  "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-runtime",
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "actioncreators": "./src/lib/client/app/actioncreators",
+        "actiontypes": "./src/lib/client/app/actiontypes",
+        "components": "./src/lib/client/app/components",
+        "utils": "./src/lib/client/app/utils",
+        "containers": "./src/lib/client/app/containers",
+        "constants": "./src/lib/client/app/utils/constants",
+        "reducers": "./src/lib/client/app/reducers"
+      }
+    }]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "add-module-exports",
+        "transform-es2015-modules-commonjs"
+      ]
+    },
+    "development": {}
+  }
+}
