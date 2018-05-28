@@ -267,7 +267,7 @@ export default class Home extends Component {
                   </span>
                   <div className="desc">
                     <h3>亞洲最大的學術聯盟</h3>
-                    <p></p>
+                    <p>擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合。</p>
                   </div>
                 </div>
               </div>
@@ -278,7 +278,7 @@ export default class Home extends Component {
                   </span>
                   <div className="desc">
                     <h3>最悠久的歷史</h3>
-                    <p>美國風險分析總會成立於1980年</p>
+                    <p>美國風險分析總會成立於1980年，至今已經有超過三十年的歷史。</p>
                   </div>
                 </div>
               </div>
@@ -289,7 +289,7 @@ export default class Home extends Component {
                   </span>
                   <div className="desc">
                     <h3>最優質的學術期刊</h3>
-                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+                    <p>藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。</p>
                   </div>
                 </div>
               </div>
@@ -300,7 +300,7 @@ export default class Home extends Component {
                   </span>
                   <div className="desc">
                     <h3>據點遍布世界</h3>
-                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+                    <p>每年均針對不同主題於世界各地舉辦研討會，並邀請國際專家學者來台演講，促成亞太區輪流主辦之風險國際會議</p>
                   </div>
                 </div>
               </div>
@@ -331,7 +331,7 @@ export default class Home extends Component {
                         data-speed="5000"
                         data-refresh-interval="50"
                       />
-                      <span className="colorlib-counter-label">Courses</span>
+                      <span className="colorlib-counter-label">會議</span>
                     </div>
                   </div>
                 </div>
@@ -348,7 +348,7 @@ export default class Home extends Component {
                         data-speed="5000"
                         data-refresh-interval="50"
                       />
-                      <span className="colorlib-counter-label">Students</span>
+                      <span className="colorlib-counter-label">會員</span>
                     </div>
                   </div>
                 </div>
@@ -365,7 +365,7 @@ export default class Home extends Component {
                         data-speed="5000"
                         data-refresh-interval="50"
                       />
-                      <span className="colorlib-counter-label">Teachers</span>
+                      <span className="colorlib-counter-label">教授</span>
                     </div>
                   </div>
                 </div>
@@ -382,7 +382,7 @@ export default class Home extends Component {
                         data-speed="5000"
                         data-refresh-interval="50"
                       />
-                      <span className="colorlib-counter-label">Countries</span>
+                      <span className="colorlib-counter-label">據點</span>
                     </div>
                   </div>
                 </div>
@@ -391,178 +391,7 @@ export default class Home extends Component {
           </div>
         </div>
 
-        <div className="colorlib-classes colorlib-light-grey">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-                <h2>Our Classes</h2>
-                <p>
-                  Even the all-powerful Pointing has no control about the blind texts it is an
-                  almost unorthographic life One day however a small line of blind text by the name
-                </p>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-4 animate-box">
-                <div className="classes">
-                  <div
-                    className="classes-img"
-                    style={{ backgroundImage: 'url(/images/classes-1.jpg' }}
-                  >
-                    <span className="price text-center">
-                      <small>$450</small>
-                    </span>
-                  </div>
-                  <div className="desc">
-                    <h3>
-                      <a href="#">Developing Mobile Apps</a>
-                    </h3>
-                    <p>
-                      Pointing has no control about the blind texts it is an almost unorthographic
-                      life
-                    </p>
-                    <p>
-                      <a href="#" className="btn-learn">
-                        Learn More <i className="icon-arrow-right3" />
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 animate-box">
-                <div className="classes">
-                  <div
-                    className="classes-img"
-                    style={{ backgroundImage: 'url(/images/classes-2.jpg' }}
-                  >
-                    <span className="price text-center">
-                      <small>$450</small>
-                    </span>
-                  </div>
-                  <div className="desc">
-                    <h3>
-                      <a href="#">Convert PSD to HTML</a>
-                    </h3>
-                    <p>
-                      Pointing has no control about the blind texts it is an almost unorthographic
-                      life
-                    </p>
-                    <p>
-                      <a href="#" className="btn-learn">
-                        Learn More <i className="icon-arrow-right3" />
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 animate-box">
-                <div className="classes">
-                  <div
-                    className="classes-img"
-                    style={{ backgroundImage: 'url(/images/classes-3.jpg' }}
-                  >
-                    <span className="price text-center">
-                      <small>$450</small>
-                    </span>
-                  </div>
-                  <div className="desc">
-                    <h3>
-                      <a href="#">Convert HTML to WordPress</a>
-                    </h3>
-                    <p>
-                      Pointing has no control about the blind texts it is an almost unorthographic
-                      life
-                    </p>
-                    <p>
-                      <a href="#" className="btn-learn">
-                        Learn More <i className="icon-arrow-right3" />
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 animate-box">
-                <div className="classes">
-                  <div
-                    className="classes-img"
-                    style={{ backgroundImage: 'url(/images/classes-4.jpg' }}
-                  >
-                    <span className="price text-center">
-                      <small>$450</small>
-                    </span>
-                  </div>
-                  <div className="desc">
-                    <h3>
-                      <a href="#">Developing Mobile Apps</a>
-                    </h3>
-                    <p>
-                      Pointing has no control about the blind texts it is an almost unorthographic
-                      life
-                    </p>
-                    <p>
-                      <a href="#" className="btn-learn">
-                        Learn More <i className="icon-arrow-right3" />
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 animate-box">
-                <div className="classes">
-                  <div
-                    className="classes-img"
-                    style={{ backgroundImage: 'url(/images/classes-5.jpg' }}
-                  >
-                    <span className="price text-center">
-                      <small>$450</small>
-                    </span>
-                  </div>
-                  <div className="desc">
-                    <h3>
-                      <a href="#">Learned Smoke Effects</a>
-                    </h3>
-                    <p>
-                      Pointing has no control about the blind texts it is an almost unorthographic
-                      life
-                    </p>
-                    <p>
-                      <a href="#" className="btn-learn">
-                        Learn More <i className="icon-arrow-right3" />
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 animate-box">
-                <div className="classes">
-                  <div
-                    className="classes-img"
-                    style={{ backgroundImage: 'url(/images/classes-6.jpg' }}
-                  >
-                    <span className="price text-center">
-                      <small>$450</small>
-                    </span>
-                  </div>
-                  <div className="desc">
-                    <h3>
-                      <a href="#">Convert HTML to WordPress</a>
-                    </h3>
-                    <p>
-                      Pointing has no control about the blind texts it is an almost unorthographic
-                      life
-                    </p>
-                    <p>
-                      <a href="#" className="btn-learn">
-                        Learn More <i className="icon-arrow-right3" />
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        {/*
         <div
           id="colorlib-testimony"
           className="testimony-img"
@@ -640,15 +469,15 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+        */}
 
         <div className="colorlib-trainers">
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-                <h2>Our Experienced Professor</h2>
+                <h2>我們的團隊</h2>
                 <p>
-                  Even the all-powerful Pointing has no control about the blind texts it is an
-                  almost unorthographic life One day however a small line of blind text by the name
+                  擁有來自世界各地的知名學者的支持，奠定學會扎實的基礎。
                 </p>
               </div>
             </div>
@@ -660,8 +489,8 @@ export default class Home extends Component {
                     style={{ backgroundImage: 'url(/images/person1.jpg)' }}
                   />
                   <div className="desc">
-                    <h3>Olivia Young</h3>
-                    <span>Teacher</span>
+                    <h3>林文印</h3>
+                    <span>院長</span>
                   </div>
                 </div>
               </div>
@@ -673,8 +502,8 @@ export default class Home extends Component {
                     style={{ backgroundImage: 'url(/images/person2.jpg)' }}
                   />
                   <div className="desc">
-                    <h3>Daniel Anderson</h3>
-                    <span>Professor</span>
+                    <h3>陳重信</h3>
+                    <span>教授</span>
                   </div>
                 </div>
               </div>
@@ -686,8 +515,8 @@ export default class Home extends Component {
                     style={{ backgroundImage: 'url(/images/person3.jpg)' }}
                   />
                   <div className="desc">
-                    <h3>David Brook</h3>
-                    <span>Teacher</span>
+                    <h3>詹長權</h3>
+                    <span>學者</span>
                   </div>
                 </div>
               </div>
@@ -699,8 +528,8 @@ export default class Home extends Component {
                     style={{ backgroundImage: 'url(/images/person4.jpg)' }}
                   />
                   <div className="desc">
-                    <h3>Brigeth Smith</h3>
-                    <span>Teacher</span>
+                    <h3>許惠悰</h3>
+                    <span>研究員</span>
                   </div>
                 </div>
               </div>
@@ -708,6 +537,7 @@ export default class Home extends Component {
           </div>
         </div>
 
+        {/*
         <div className="colorlib-event">
           <div className="container">
             <div className="row">
@@ -901,6 +731,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+        */}
       </section>
     );
   }
