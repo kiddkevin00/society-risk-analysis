@@ -489,7 +489,7 @@ export default class Home extends Component {
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
                 <h2>我們的團隊</h2>
-                <p>擁有來自世界各地的知名學者的支持，奠定學會扎實的基礎。</p>
+                <p>擁有來自世界各地的知名學者的支持，奠定學會扎實的研究基礎。</p>
               </div>
             </div>
             <div className="row">

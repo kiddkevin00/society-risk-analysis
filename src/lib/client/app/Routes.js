@@ -71,15 +71,15 @@ const Routes = ({ store }) => (
                         'has-dropdown'
                       )}
                     >
-                      <a href="https://sra-taiwan.firebaseapp.com/AboutUs.html">學會介紹</a>
+                      <a href="/about">學會介紹</a>
                       <ul className="dropdown">
-                        <li>
-                          <a href="https://sra-taiwan.firebaseapp.com/AboutUs.html">關於本會</a>
+                        <li className={cx({ active: window.location.pathname === '/about' })}>
+                          <a href="/about">關於本會</a>
                         </li>
-                        <li>
+                        <li className={cx({ active: window.location.pathname === '/regulation' })}>
                           <a href="https://sra-taiwan.firebaseapp.com/Regulation.html">學會章程</a>
                         </li>
-                        <li>
+                        <li className={cx({ active: window.location.pathname === '/cadres' })}>
                           <a href="https://sra-taiwan.firebaseapp.com/Cadres.html">歷屆幹部</a>
                         </li>
                       </ul>
