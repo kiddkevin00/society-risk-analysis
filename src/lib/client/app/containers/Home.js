@@ -90,10 +90,10 @@ export default class Home extends Component {
                       <i className="flaticon-market" />
                     </span>
                     <div className="desc">
-                      <h3>Learn Courses Online</h3>
+                      <h3>2018台灣風險分析學會年會暨研討會當日資訊</h3>
                       <p>
-                        <a href="#" className="view-more">
-                          View More
+                        <a href="https://sra-taiwan.firebaseapp.com/News.html?0" className="view-more">
+                          查看詳情
                         </a>
                       </p>
                     </div>
@@ -103,20 +103,23 @@ export default class Home extends Component {
                       <i className="flaticon-open-book" />
                     </span>
                     <div className="desc">
-                      <h3>Online Library Store</h3>
+                      <h3>2018台灣風險分析學會年會暨研討會論文摘要徵稿</h3>
                       <p>
                         <a href="#" className="view-more">
-                          View More
+                          查看詳情
                         </a>
                       </p>
                     </div>
                   </div>
                   <div className="one-third color-3 animate-box">
-                    <div className="desc2">
-                      <h3>50% off in all selected Courses</h3>
+                    <span className="icon">
+                      <i className="flaticon-book" />
+                    </span>
+                    <div className="desc">
+                      <h3>2019年 SRA World Congress on Risk</h3>
                       <p>
                         <a href="#" className="view-more">
-                          View More
+                          查看詳情
                         </a>
                       </p>
                     </div>
@@ -241,9 +244,7 @@ export default class Home extends Component {
                         >
                           <div className="panel-body">
                             <p>
-                              未來，為了促使學界的研究成果能更為與實務需求結合，<strong>
-                                台灣風險分析學會（Taiwan Society for Risk Analysis, TSRA）
-                                                       </strong>將擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合，並藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。
+                              未來，為了促使學界的研究成果能更為與實務需求結合，<strong>台灣風險分析學會（Taiwan Society for Risk Analysis, TSRA</strong> 將擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合，並藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。
                             </p>
                           </div>
                         </div>
@@ -265,8 +266,8 @@ export default class Home extends Component {
                     <i className="flaticon-books" />
                   </span>
                   <div className="desc">
-                    <h3>Professional Courses</h3>
-                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+                    <h3>亞洲最大的學術聯盟</h3>
+                    <p></p>
                   </div>
                 </div>
               </div>
@@ -276,8 +277,8 @@ export default class Home extends Component {
                     <i className="flaticon-professor" />
                   </span>
                   <div className="desc">
-                    <h3>Experienced Instructor</h3>
-                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+                    <h3>最悠久的歷史</h3>
+                    <p>美國風險分析總會成立於1980年</p>
                   </div>
                 </div>
               </div>
@@ -287,7 +288,7 @@ export default class Home extends Component {
                     <i className="flaticon-book" />
                   </span>
                   <div className="desc">
-                    <h3>Practical Training</h3>
+                    <h3>最優質的學術期刊</h3>
                     <p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
                   </div>
                 </div>
@@ -298,7 +299,7 @@ export default class Home extends Component {
                     <i className="flaticon-diploma" />
                   </span>
                   <div className="desc">
-                    <h3>Validated Certificate</h3>
+                    <h3>據點遍布世界</h3>
                     <p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
                   </div>
                 </div>
