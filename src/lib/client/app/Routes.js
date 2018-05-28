@@ -128,7 +128,7 @@ const Routes = ({ store }) => (
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
                 <h2>追蹤我們</h2>
-                <p>訂閱我們的時事通訊，跟上學界最新動態</p>
+                <p>訂閱我們的時事通訊，跟上最新學界動態</p>
               </div>
             </div>
             <div className="row animate-box">
