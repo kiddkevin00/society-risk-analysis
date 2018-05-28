@@ -71,16 +71,16 @@ const Routes = ({ store }) => (
                         'has-dropdown'
                       )}
                     >
-                      <a href="/about">學會介紹</a>
+                      <a href="https://sra-taiwan.firebaseapp.com/AboutUs.html">學會介紹</a>
                       <ul className="dropdown">
                         <li>
-                          <a href="/about">關於本會</a>
+                          <a href="https://sra-taiwan.firebaseapp.com/AboutUs.html">關於本會</a>
                         </li>
                         <li>
-                          <a href="#">學會章程</a>
+                          <a href="https://sra-taiwan.firebaseapp.com/Regulation.html">學會章程</a>
                         </li>
                         <li>
-                          <a href="#">歷屆幹部</a>
+                          <a href="https://sra-taiwan.firebaseapp.com/Cadres.html">歷屆幹部</a>
                         </li>
                       </ul>
                     </li>
@@ -88,10 +88,10 @@ const Routes = ({ store }) => (
                       <a href="/news">最新消息</a>
                     </li>
                     <li className={cx({ active: window.location.pathname === '/events' })}>
-                      <a href="/events">學會會刊</a>
+                      <a href="https://sra-taiwan.firebaseapp.com/Journal.html">學會會刊</a>
                     </li>
                     <li className={cx({ active: window.location.pathname === '/contact' })}>
-                      <a href="/contact">聯絡我們</a>
+                      <a href="https://sra-taiwan.firebaseapp.com/ContactUs.html">聯絡我們</a>
                     </li>
                     <li className="btn-cta">
                       <a href="#">
