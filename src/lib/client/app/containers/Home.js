@@ -92,7 +92,10 @@ export default class Home extends Component {
                     <div className="desc">
                       <h3>2018台灣風險分析學會年會暨研討會當日資訊</h3>
                       <p>
-                        <a href="https://sra-taiwan.firebaseapp.com/News.html?0" className="view-more">
+                        <a
+                          href="https://sra-taiwan.firebaseapp.com/News.html?0"
+                          className="view-more"
+                        >
                           查看詳情
                         </a>
                       </p>
@@ -244,7 +247,11 @@ export default class Home extends Component {
                         >
                           <div className="panel-body">
                             <p>
-                              未來，為了促使學界的研究成果能更為與實務需求結合，<strong>台灣風險分析學會（Taiwan Society for Risk Analysis, TSRA</strong> 將擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合，並藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。
+                              未來，為了促使學界的研究成果能更為與實務需求結合，<strong>
+                                台灣風險分析學會（Taiwan Society for Risk Analysis, TSRA
+                                                       </strong>{' '}
+                              將擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合，
+                              並藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。
                             </p>
                           </div>
                         </div>
@@ -267,7 +274,9 @@ export default class Home extends Component {
                   </span>
                   <div className="desc">
                     <h3>亞洲最大的學術聯盟</h3>
-                    <p>擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合。</p>
+                    <p>
+                      擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合。
+                    </p>
                   </div>
                 </div>
               </div>
@@ -289,7 +298,9 @@ export default class Home extends Component {
                   </span>
                   <div className="desc">
                     <h3>最優質的學術期刊</h3>
-                    <p>藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。</p>
+                    <p>
+                      藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。
+                    </p>
                   </div>
                 </div>
               </div>
@@ -300,7 +311,9 @@ export default class Home extends Component {
                   </span>
                   <div className="desc">
                     <h3>據點遍布世界</h3>
-                    <p>每年均針對不同主題於世界各地舉辦研討會，並邀請國際專家學者來台演講，促成亞太區輪流主辦之風險國際會議</p>
+                    <p>
+                      每年均針對不同主題於世界各地舉辦研討會，並邀請國際專家學者來台演講，促成亞太區輪流主辦之風險國際會議
+                    </p>
                   </div>
                 </div>
               </div>
@@ -476,9 +489,7 @@ export default class Home extends Component {
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
                 <h2>我們的團隊</h2>
-                <p>
-                  擁有來自世界各地的知名學者的支持，奠定學會扎實的基礎。
-                </p>
+                <p>擁有來自世界各地的知名學者的支持，奠定學會扎實的基礎。</p>
               </div>
             </div>
             <div className="row">
