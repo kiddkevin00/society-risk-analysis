@@ -8,16 +8,16 @@ export default class Events extends Component {
         <aside id="colorlib-hero">
           <div className="flexslider">
             <ul className="slides">
-              <li style={{ backgroundImage: 'url(images/img_bg_2.jpg' }}>
+              <li style={{ backgroundImage: 'url(images/img_bg_2.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
                     <div className="col-md-6 col-sm-12 col-md-offset-3 slider-text">
                       <div className="slider-text-inner text-center">
-                        <h1>News</h1>
+                        <h1>學會會刊</h1>
                         <h2>
                           <span>
-                            <a href="index.html">Home</a> | News
+                            <a href="/home">Home</a> | 學會會刊
                           </span>
                         </h2>
                       </div>
@@ -33,7 +33,7 @@ export default class Events extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-                <h2>Read Our News</h2>
+                <h2>相關學會會刊一覽</h2>
                 <p>
                   Even the all-powerful Pointing has no control about the blind texts it is an
                   almost unorthographic life One day however a small line of blind text by the name

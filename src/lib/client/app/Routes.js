@@ -1,6 +1,7 @@
-import { Home, News, Events } from './containers/';
+import { Home, About, News, Events, Contact } from './containers/';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import cx from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -56,19 +57,24 @@ const Routes = ({ store }) => (
               <div className="row">
                 <div className="col-md-2">
                   <div id="colorlib-logo">
-                    <a href="index.html">風險分析學會</a>
+                    <a href="/home">風險分析學會</a>
                   </div>
                 </div>
                 <div className="col-md-10 text-right menu-1">
                   <ul>
-                    <li className="active">
-                      <a href="index.html">首頁</a>
+                    <li className={cx({ active: window.location.pathname === '/home' })}>
+                      <a href="/home">首頁</a>
                     </li>
-                    <li className="has-dropdown">
-                      <a href="courses.html">學會介紹</a>
+                    <li
+                      className={cx(
+                        { active: window.location.pathname === '/about' },
+                        'has-dropdown'
+                      )}
+                    >
+                      <a href="/about">學會介紹</a>
                       <ul className="dropdown">
                         <li>
-                          <a href="courses-single.html">關於本會</a>
+                          <a href="/about">關於本會</a>
                         </li>
                         <li>
                           <a href="#">學會章程</a>
@@ -78,14 +84,14 @@ const Routes = ({ store }) => (
                         </li>
                       </ul>
                     </li>
-                    <li>
-                      <a href="news.html">最新消息</a>
+                    <li className={cx({ active: window.location.pathname === '/news' })}>
+                      <a href="/news">最新消息</a>
                     </li>
-                    <li>
-                      <a href="event.html">學會會刊</a>
+                    <li className={cx({ active: window.location.pathname === '/events' })}>
+                      <a href="/events">學會會刊</a>
                     </li>
-                    <li>
-                      <a href="contact.html">聯絡我們</a>
+                    <li className={cx({ active: window.location.pathname === '/contact' })}>
+                      <a href="/contact">聯絡我們</a>
                     </li>
                     <li className="btn-cta">
                       <a href="#">
@@ -102,8 +108,10 @@ const Routes = ({ store }) => (
         <BrowserRouter>
           <Switch>
             <Route exact={true} path="/home" component={Home} />
+            <Route exact={true} path="/about" component={About} />
             <Route exact={true} path="/news" component={News} />
             <Route exact={true} path="/events" component={Events} />
+            <Route exact={true} path="/contact" component={Contact} />
 
             <Redirect from="/" to="/home" />
           </Switch>
