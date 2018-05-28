@@ -185,7 +185,6 @@ const Routes = ({ store }) => (
                         <i className="icon-googleplus" />
                       </a>
                     </li>
-
                   </ul>
                 </div>
               </div>
