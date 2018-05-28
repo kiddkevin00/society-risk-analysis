@@ -58,7 +58,7 @@ export default class News extends Component {
                     <span className="icon">
                       <i className="icon-map" />
                     </span>
-                    <p>美國紐奧良 (New Orleans, Louisiana)</p>
+                    <p>各位會員先進：一年一度的SRA總會年會，於今年12月2-6日於美國紐奧良舉行，歡迎會員踴躍投稿！鼓勵各位會員踴躍提出symposium提案。</p>
                   </div>
                 </div>
               </div>
@@ -66,7 +66,7 @@ export default class News extends Component {
                 <div className="event-entry">
                   <div className="desc">
                     <p className="meta">
-                      <span className="day">17</span>
+                      <span className="day">19</span>
                       <span className="month">Jan</span>
                     </p>
                     <p className="organizer">
@@ -80,7 +80,7 @@ export default class News extends Component {
                     <span className="icon">
                       <i className="icon-map" />
                     </span>
-                    <p>國立成功大學 C-hub 創意基地</p>
+                    <p>本學會之年會暨研討會將於 2018 年 1 月 19 日星期五於國立成功大學舉行，歡迎各風險分析領域相關先進蒞臨會場，共襄盛舉!</p>
                   </div>
                 </div>
               </div>

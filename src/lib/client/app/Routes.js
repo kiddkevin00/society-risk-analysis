@@ -127,8 +127,8 @@ const Routes = ({ store }) => (
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-                <h2>Subscribe Newsletter</h2>
-                <p>Subscribe our newsletter and get latest update</p>
+                <h2>追蹤我們</h2>
+                <p>訂閱我們的時事通訊，跟上學界最新動態</p>
               </div>
             </div>
             <div className="row animate-box">
@@ -142,14 +142,14 @@ const Routes = ({ store }) => (
                             type="text"
                             className="form-control"
                             id="email"
-                            placeholder="Enter your email"
+                            placeholder="輸入電子信箱"
                           />
                         </div>
                       </div>
                       <div className="col-one-third">
                         <div className="form-group">
                           <button type="submit" className="btn btn-primary">
-                            Subscribe Now
+                            立即訂閱
                           </button>
                         </div>
                       </div>
@@ -164,68 +164,63 @@ const Routes = ({ store }) => (
           <div className="container">
             <div className="row row-pb-md">
               <div className="col-md-3 colorlib-widget">
-                <h4>About Eskwela</h4>
+                <h4>關於我們</h4>
                 <p>
-                  Far from the countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of the Semantics
+                  成立於1980年，為一個國際性的學術組織，目的為推動風險分析的發展，並提供從事風險分析工作與研究的專業人事學術交流與經驗分享的場所，並發行具有高度影響指數的學術期刊。
                 </p>
                 <div>
                   <ul className="colorlib-social-icons">
                     <li>
-                      <a href="#">
+                      <a target="_blank" href="https://goo.gl/NA227k">
                         <i className="icon-twitter" />
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a target="_blank" href="https://goo.gl/EDZwgL">
                         <i className="icon-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="icon-linkedin" />
+                      <a target="_blank" href="https://goo.gl/adVvSS">
+                        <i className="icon-googleplus" />
                       </a>
                     </li>
-                    <li>
-                      <a href="#">
-                        <i className="icon-dribbble" />
-                      </a>
-                    </li>
+
                   </ul>
                 </div>
               </div>
               <div className="col-md-3 colorlib-widget">
-                <h4>Quick Links</h4>
+                <h4>快速連結</h4>
                 <div>
                   <ul className="colorlib-footer-links">
                     <li>
-                      <a href="#">
-                        <i className="icon-check" /> About Us
+                      <a href="/about">
+                        <i className="icon-check" /> 學會介紹
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="icon-check" /> Testimonials
+                        <i className="icon-check" /> 學會章程
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="icon-check" /> Courses
+                        <i className="icon-check" /> 歷屆幹部
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="icon-check" /> Event
+                      <a href="/news">
+                        <i className="icon-check" /> 最新消息
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="icon-check" /> News
+                      <a href="/events">
+                        <i className="icon-check" /> 學會會刊
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="icon-check" /> Contact
+                      <a href="/contact">
+                        <i className="icon-check" /> 聯絡我們
                       </a>
                     </li>
                   </ul>
@@ -233,7 +228,7 @@ const Routes = ({ store }) => (
               </div>
 
               <div className="col-md-3 colorlib-widget">
-                <h4>Recent Post</h4>
+                <h4>近期會刊</h4>
                 <div className="f-blog">
                   <a
                     href="blog.html"
@@ -242,10 +237,10 @@ const Routes = ({ store }) => (
                   />
                   <div className="desc">
                     <h2>
-                      <a href="blog.html">Creating Mobile Apps</a>
+                      <a href="blog.html">基於風險的血液安全管理</a>
                     </h2>
                     <p className="admin">
-                      <span>18 April 2018</span>
+                      <span>2017 第13期</span>
                     </p>
                   </div>
                 </div>
@@ -257,10 +252,10 @@ const Routes = ({ store }) => (
                   />
                   <div className="desc">
                     <h2>
-                      <a href="blog.html">Creating Mobile Apps</a>
+                      <a href="blog.html">環境物聯網時代下之暴露評估</a>
                     </h2>
                     <p className="admin">
-                      <span>18 April 2018</span>
+                      <span>2017 第12期</span>
                     </p>
                   </div>
                 </div>
@@ -272,34 +267,34 @@ const Routes = ({ store }) => (
                   />
                   <div className="desc">
                     <h2>
-                      <a href="blog.html">Creating Mobile Apps</a>
+                      <a href="blog.html">基於風險的血液安全管理</a>
                     </h2>
                     <p className="admin">
-                      <span>18 April 2018</span>
+                      <span>2017 第10期</span>
                     </p>
                   </div>
                 </div>
               </div>
 
               <div className="col-md-3 colorlib-widget">
-                <h4>Contact Info</h4>
+                <h4>聯繫訊息</h4>
                 <ul className="colorlib-footer-links">
                   <li>
-                    291 South 21th Street, <br /> Suite 721 New York NY 10016
+                    40402 台中市北區學士路 <br /> 91 號 立夫教學大樓 15 樓
                   </li>
                   <li>
-                    <a href="tel://1234567920">
-                      <i className="icon-phone" /> + 1235 2355 98
+                    <a href="tel://04-22053366#6117">
+                      <i className="icon-phone" /> &nbsp;04-2205-3366 #6117
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:info@yoursite.com">
-                      <i className="icon-envelope" /> info@yoursite.com
+                    <a href="mailto:2012tsra@gmail.com">
+                      <i className="icon-envelope" />2012tsra@gmail.com
                     </a>
                   </li>
                   <li>
-                    <a href="http://luxehotel.com">
-                      <i className="icon-location4" /> yourwebsite.com
+                    <a href="https://sra-taiwan.firebaseapp.com/">
+                      <i className="icon-location4" /> sra-taiwan.firebaseapp.com
                     </a>
                   </li>
                 </ul>
