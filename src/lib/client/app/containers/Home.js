@@ -8,7 +8,7 @@ export default class Home extends Component {
         <aside id="colorlib-hero">
           <div className="flexslider">
             <ul className="slides">
-              <li style={{ backgroundImage: 'url(/images/sra_img_bg_1.jpg)' }}>
+              <li style={{ backgroundImage: 'url(/images/img-bg-1_sra.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
@@ -25,7 +25,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </li>
-              <li style={{ backgroundImage: 'url(/images/img_bg_2.jpg)' }}>
+              <li style={{ backgroundImage: 'url(/images/img-bg-2.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
@@ -42,7 +42,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </li>
-              <li style={{ backgroundImage: 'url(/images/img_bg_3.jpg)' }}>
+              <li style={{ backgroundImage: 'url(/images/img-bg-3.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
@@ -59,7 +59,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </li>
-              <li style={{ backgroundImage: 'url(/images/img_bg_4.jpg' }}>
+              <li style={{ backgroundImage: 'url(/images/img-bg-4.jpg' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
@@ -324,7 +324,7 @@ export default class Home extends Component {
         <div
           id="colorlib-counter"
           className="colorlib-counters"
-          style={{ backgroundImage: 'url(/images/img_bg_2.jpg' }}
+          style={{ backgroundImage: 'url(/images/img-bg-2.jpg' }}
           data-stellar-background-ratio="0.5"
         >
           <div className="overlay" />
@@ -408,7 +408,7 @@ export default class Home extends Component {
         <div
           id="colorlib-testimony"
           className="testimony-img"
-          style={{ backgroundImage: 'url(/images/img_bg_2.jpg' }}
+          style={{ backgroundImage: 'url(/images/img-bg-2.jpg' }}
           data-stellar-background-ratio="0.5"
         >
           <div className="overlay" />
@@ -436,7 +436,7 @@ export default class Home extends Component {
                           </blockquote>
                           <div
                             className="figure-img"
-                            style={{ backgroundImage: 'url(/images/person1.jpg' }}
+                            style={{ backgroundImage: 'url(/images/person-1.jpg' }}
                           />
                         </div>
                       </div>
@@ -453,7 +453,7 @@ export default class Home extends Component {
                           </blockquote>
                           <div
                             className="figure-img"
-                            style={{ backgroundImage: 'url(/images/person2.jpg' }}
+                            style={{ backgroundImage: 'url(/images/person-2.jpg' }}
                           />
                         </div>
                       </div>
@@ -471,7 +471,7 @@ export default class Home extends Component {
                           </blockquote>
                           <div
                             className="figure-img"
-                            style={{ backgroundImage: 'url(/images/person3.jpg' }}
+                            style={{ backgroundImage: 'url(/images/person-3.jpg' }}
                           />
                         </div>
                       </div>
@@ -497,7 +497,7 @@ export default class Home extends Component {
                 <div className="trainers-entry">
                   <div
                     className="trainer-img"
-                    style={{ backgroundImage: 'url(/images/person1.jpg)' }}
+                    style={{ backgroundImage: 'url(/images/person-1.jpg)' }}
                   />
                   <div className="desc">
                     <h3>林文印</h3>
@@ -510,7 +510,7 @@ export default class Home extends Component {
                 <div className="trainers-entry">
                   <div
                     className="trainer-img"
-                    style={{ backgroundImage: 'url(/images/person2.jpg)' }}
+                    style={{ backgroundImage: 'url(/images/person-2.jpg)' }}
                   />
                   <div className="desc">
                     <h3>陳重信</h3>
@@ -523,7 +523,7 @@ export default class Home extends Component {
                 <div className="trainers-entry">
                   <div
                     className="trainer-img"
-                    style={{ backgroundImage: 'url(/images/person3.jpg)' }}
+                    style={{ backgroundImage: 'url(/images/person-3.jpg)' }}
                   />
                   <div className="desc">
                     <h3>詹長權</h3>
@@ -536,7 +536,7 @@ export default class Home extends Component {
                 <div className="trainers-entry">
                   <div
                     className="trainer-img"
-                    style={{ backgroundImage: 'url(/images/person4.jpg)' }}
+                    style={{ backgroundImage: 'url(/images/person-4.jpg)' }}
                   />
                   <div className="desc">
                     <h3>許惠悰</h3>

@@ -1,4 +1,4 @@
-import { Home, About, News, Events, Contact } from './containers/';
+import { Home, About, News, Events, Contact, Registration } from './containers/';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import cx from 'classnames';
@@ -113,6 +113,8 @@ const Routes = ({ store }) => (
             <Route exact={true} path="/events" component={Events} />
             <Route exact={true} path="/contact" component={Contact} />
 
+            <Route path="/register" component={Registration} />
+
             <Redirect from="/" to="/home" />
           </Switch>
         </BrowserRouter>
@@ -120,7 +122,7 @@ const Routes = ({ store }) => (
         <div
           id="colorlib-subscribe"
           className="subs-img"
-          style={{ backgroundImage: 'url(/images/img_bg_2.jpg' }}
+          style={{ backgroundImage: 'url(/images/img-bg-2.jpg' }}
           data-stellar-background-ratio="0.5"
         >
           <div className="overlay" />
