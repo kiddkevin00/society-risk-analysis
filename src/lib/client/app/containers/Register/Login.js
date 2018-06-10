@@ -1,16 +1,53 @@
+import actionCreator from '../../actionCreators/register/login'
 import { FormInput } from '../../components/';
 import cx from 'classnames';
+import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Login extends Component {
+class UnconnectedLogin extends Component {
+  static propTypes = {
+    dispatchResetState: PropTypes.func.isRequired,
+    dispatchSetFormField: PropTypes.func.isRequired,
+    dispatchLogin: PropTypes.func.isRequired,
+
+    formEmail: PropTypes.string.isRequired,
+    formPassword: PropTypes.string.isRequired,
+    isLoggingIn: PropTypes.bool.isRequired,
+    isErrorVisible: PropTypes.bool.isRequired,
+    errorMsg: PropTypes.string.isRequired,
+  };
+
+  componentWillUnmount() {
+    this.props.dispatchResetState();
+  }
+
+  onChange(field, value) {
+    this.props.dispatchSetFormField(field, value);
+  };
+
+  onSubmit = (event) => {
+    // Prevents browser's default navigation (page refresh).
+    event.preventDefault();
+
+    if (this.email.isValid() && this.password.isValid()) {
+      const email = this.props.formEmail.trim() && this.props.formEmail.toLowerCase();
+      const password = this.props.formPassword.trim();
+
+      this.props.dispatchLogin(email, password);
+    } else {
+      this.email.isValid();
+      this.password.isValid();
+    }
+  };
+
   render() {
     const alertBoxClasses = cx('alert', 'alert-danger', 'alert-dismissible', {
       collapse: !this.props.isErrorVisible,
     });
     let loader;
 
-    if (this.props.isLoading) {
+    if (this.props.isLoggingIn) {
       loader = <div className="slow-loader" />;
     } else {
       loader = null;
@@ -48,7 +85,7 @@ class Login extends Component {
               </div>
             </div>
             <div className="form-bottom">
-              <form onSubmit={this._onSubmit}>
+              <form onSubmit={this.onSubmit}>
                 {loader}
                 <div className={alertBoxClasses} role="alert">
                   <a className="close" data-dismiss="alert">
@@ -63,8 +100,8 @@ class Login extends Component {
                     this.email = formInputObj;
                   }}
                   validate={FormInput.validateEmailField}
-                  value=""
-                  onChange={() => {}}
+                  value={this.props.formEmail}
+                  onChange={this.onChange.bind(this, 'email')}
                   errorMessage="Email is invalid"
                   emptyMessage="Email can't be empty"
                 />
@@ -74,8 +111,8 @@ class Login extends Component {
                   ref={formInputObj => {
                     this.password = formInputObj;
                   }}
-                  value=""
-                  onChange={() => {}}
+                  value={this.props.formPassword}
+                  onChange={this.onChange.bind(this, 'password')}
                   errorMessage="Password is invalid"
                   emptyMessage="Password can't be empty"
                 />
@@ -96,4 +133,30 @@ class Login extends Component {
   }
 }
 
-export { Login as default };
+function mapStateToProps(state) {
+  return {
+    formEmail: state.login.form.email.value,
+    formPassword: state.login.form.password.value,
+    isLoggingIn: state.login.main.isLoggingIn,
+    isErrorVisible: state.login.main.error.isVisible,
+    errorMsg: state.login.main.error.message,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatchResetState() {
+      dispatch(actionCreator.resetState());
+    },
+
+    dispatchSetFormField(field, value) {
+      dispatch(actionCreator.setFormField(field, value));
+    },
+
+    dispatchLogin(email, password) {
+      dispatch(actionCreator.login(email, password));
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UnconnectedLogin);

@@ -121,7 +121,7 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
-      favicon: path.resolve(__dirname, './src/lib/client/static/assets/images/', 'favicon.jpg'),
+      favicon: path.resolve(__dirname, './src/lib/client/static/assets/images/', 'favicon.ico'),
       template: path.resolve(__dirname, './src/lib/client/static/templates/', 'index.html'),
       chunksSortMode: 'dependency',
       inject: true,

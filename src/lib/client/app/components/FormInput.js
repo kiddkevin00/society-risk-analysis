@@ -26,7 +26,7 @@ class FormInput extends Component {
   }
 
   componentWillReceiveProps(newProps) {
-    // Performs update only when the new value is not empty.
+    // Performs validation only when the new value is not empty.
     if (typeof newProps.value === 'string') {
       if (newProps.value.length) {
         if (newProps.useValidator) {

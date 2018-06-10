@@ -1,7 +1,8 @@
+import login from './register/login';
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
-  test: () => ({ mock: 'value' }),
+  login,
 });
 
 export { rootReducer as default };

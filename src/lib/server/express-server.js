@@ -18,7 +18,7 @@ function setupExpressServer(app) {
   }
 
   app.use(compression());
-  app.use(favicon(path.resolve(__dirname, '../../../build/', 'favicon.jpg')));
+  app.use(favicon(path.resolve(__dirname, '../../../build/', 'favicon.ico')));
 
   // For 404 error and server-side rendering pages only.
   app.set('views', path.resolve(__dirname, 'views/'));

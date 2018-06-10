@@ -16,7 +16,7 @@ export default class Home extends Component {
                       <div className="slider-text-inner text-center">
                         <h1>亞洲最大風險分析學會</h1>
                         <p>
-                          <a href="#" className="btn btn-primary btn-lg btn-learn">
+                          <a href="/news" className="btn btn-primary btn-lg btn-learn">
                             追蹤我們
                           </a>
                         </p>
@@ -33,7 +33,7 @@ export default class Home extends Component {
                       <div className="slider-text-inner text-center">
                         <h1>長達近四十年的歷史</h1>
                         <p>
-                          <a href="#" className="btn btn-primary btn-lg btn-learn">
+                          <a href="/register/signup" className="btn btn-primary btn-lg btn-learn">
                             加入會員
                           </a>
                         </p>
@@ -50,7 +50,7 @@ export default class Home extends Component {
                       <div className="slider-text-inner text-center">
                         <h1>擁有最多高度影響指數的學術期刊</h1>
                         <p>
-                          <a href="#" className="btn btn-primary btn-lg btn-learn">
+                          <a href="/news" className="btn btn-primary btn-lg btn-learn">
                             追蹤近況
                           </a>
                         </p>
@@ -67,7 +67,7 @@ export default class Home extends Component {
                       <div className="slider-text-inner text-center">
                         <h1>據點遍布世界</h1>
                         <p>
-                          <a href="#" className="btn btn-primary btn-lg btn-learn">
+                          <a href="/register/signup" className="btn btn-primary btn-lg btn-learn">
                             加入我們
                           </a>
                         </p>
@@ -247,10 +247,9 @@ export default class Home extends Component {
                         >
                           <div className="panel-body">
                             <p>
-                              未來，為了促使學界的研究成果能更為與實務需求結合，<strong>
-                                台灣風險分析學會（Taiwan Society for Risk Analysis, TSRA
-                                                       </strong>{' '}
-                              將擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合，
+                              未來，為了促使學界的研究成果能更為與實務需求結合，
+                              <strong>台灣風險分析學會（Taiwan Society for Risk Analysis, TSRA</strong>
+                              {' '}將擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合，
                               並藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。
                             </p>
                           </div>

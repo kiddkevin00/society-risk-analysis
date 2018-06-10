@@ -1,4 +1,4 @@
-import { Home, About, News, Events, Contact, Registration } from './containers/';
+import { Home, About, News, Events, Contact, Register } from './containers/';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import cx from 'classnames';
@@ -11,7 +11,7 @@ const Routes = ({ store }) => (
       <div className="colorlib-loader" />
 
       <div id="page">
-        <nav className="colorlib-nav" role="navigation">
+        <nav className="colorlib-nav">
           <div className="upper-menu">
             <div className="container">
               <div className="row">
@@ -46,7 +46,7 @@ const Routes = ({ store }) => (
                   </p>
                   */}
                   <p className="btn-apply">
-                    <a href="#">Signup Now</a>
+                    <a href="/register/signup">Signup Now</a>
                   </p>
                 </div>
               </div>
@@ -91,10 +91,10 @@ const Routes = ({ store }) => (
                       <a href="https://sra-taiwan.firebaseapp.com/Journal.html">學會會刊</a>
                     </li>
                     <li className={cx({ active: window.location.pathname === '/contact' })}>
-                      <a href="https://sra-taiwan.firebaseapp.com/ContactUs.html">聯絡我們</a>
+                      <a href="/contact">聯絡我們</a>
                     </li>
                     <li className="btn-cta">
-                      <a href="#">
+                      <a href="/register/signup">
                         <span>加入會員</span>
                       </a>
                     </li>
@@ -113,7 +113,7 @@ const Routes = ({ store }) => (
             <Route exact={true} path="/events" component={Events} />
             <Route exact={true} path="/contact" component={Contact} />
 
-            <Route path="/register" component={Registration} />
+            <Route path="/register" component={Register} />
 
             <Redirect from="/" to="/home" />
           </Switch>
@@ -150,7 +150,7 @@ const Routes = ({ store }) => (
                       </div>
                       <div className="col-one-third">
                         <div className="form-group">
-                          <button type="submit" className="btn btn-primary">
+                          <button type="button" className="btn btn-primary">
                             立即訂閱
                           </button>
                         </div>
@@ -173,17 +173,17 @@ const Routes = ({ store }) => (
                 <div>
                   <ul className="colorlib-social-icons">
                     <li>
-                      <a target="_blank" href="https://goo.gl/NA227k">
+                      <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/NA227k">
                         <i className="icon-twitter" />
                       </a>
                     </li>
                     <li>
-                      <a target="_blank" href="https://goo.gl/EDZwgL">
+                      <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/EDZwgL">
                         <i className="icon-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a target="_blank" href="https://goo.gl/adVvSS">
+                      <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/adVvSS">
                         <i className="icon-googleplus" />
                       </a>
                     </li>
@@ -200,12 +200,12 @@ const Routes = ({ store }) => (
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://sra-taiwan.firebaseapp.com/Regulation.html">
                         <i className="icon-check" /> 學會章程
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://sra-taiwan.firebaseapp.com/Cadres.html">
                         <i className="icon-check" /> 歷屆幹部
                       </a>
                     </li>
@@ -232,13 +232,21 @@ const Routes = ({ store }) => (
                 <h4>近期會刊</h4>
                 <div className="f-blog">
                   <a
-                    href="blog.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://goo.gl/C6Dz6y"
                     className="blog-img"
                     style={{ backgroundImage: 'url(/images/blog-1.jpg' }}
                   />
                   <div className="desc">
                     <h2>
-                      <a href="blog.html">基於風險的血液安全管理</a>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://goo.gl/C6Dz6y"
+                      >
+                        基於風險的血液安全管理
+                      </a>
                     </h2>
                     <p className="admin">
                       <span>2017 第13期</span>
@@ -247,13 +255,21 @@ const Routes = ({ store }) => (
                 </div>
                 <div className="f-blog">
                   <a
-                    href="blog.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://goo.gl/hjmyqf"
                     className="blog-img"
                     style={{ backgroundImage: 'url(/images/blog-2.jpg' }}
                   />
                   <div className="desc">
                     <h2>
-                      <a href="blog.html">環境物聯網時代下之暴露評估</a>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://goo.gl/hjmyqf"
+                      >
+                        環境物聯網時代下之暴露評估
+                      </a>
                     </h2>
                     <p className="admin">
                       <span>2017 第12期</span>
@@ -262,13 +278,21 @@ const Routes = ({ store }) => (
                 </div>
                 <div className="f-blog">
                   <a
-                    href="blog.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://goo.gl/ng9VKy"
                     className="blog-img"
                     style={{ backgroundImage: 'url(/images/blog-3.jpg' }}
                   />
                   <div className="desc">
                     <h2>
-                      <a href="blog.html">基於風險的血液安全管理</a>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://goo.gl/ng9VKy"
+                      >
+                        歐洲雞蛋遭受芬普尼污染事件簡介
+                      </a>
                     </h2>
                     <p className="admin">
                       <span>2017 第10期</span>

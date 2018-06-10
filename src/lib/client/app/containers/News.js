@@ -53,7 +53,7 @@ export default class News extends Component {
                       </span>
                     </p>
                     <h2>
-                      <a href="event.html">2018美國紐奧良SRA總會年會 (SRA 2018 Annual Meeting)</a>
+                      <span>2018美國紐奧良SRA總會年會 (SRA 2018 Annual Meeting)</span>
                     </h2>
                   </div>
                   <div className="location">
