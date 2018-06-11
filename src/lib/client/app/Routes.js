@@ -46,7 +46,7 @@ const Routes = ({ store }) => (
                   </p>
                   */}
                   <p className="btn-apply">
-                    <a href="/register/signup">Signup Now</a>
+                    <a href="/register/login">會員登入</a>
                   </p>
                 </div>
               </div>

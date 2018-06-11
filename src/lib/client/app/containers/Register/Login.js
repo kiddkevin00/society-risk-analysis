@@ -16,6 +16,8 @@ class UnconnectedLogin extends Component {
     isLoggingIn: PropTypes.bool.isRequired,
     isErrorVisible: PropTypes.bool.isRequired,
     errorMsg: PropTypes.string.isRequired,
+
+    history: PropTypes.object.isRequired,
   };
 
   componentWillUnmount() {
@@ -26,7 +28,11 @@ class UnconnectedLogin extends Component {
     this.props.dispatchSetFormField(field, value);
   };
 
-  onSubmit = (event) => {
+  onEmailChange = this.onChange.bind(this, 'email');
+
+  onPasswordChange = this.onChange.bind(this, 'password');
+
+  onSubmit = event => {
     // Prevents browser's default navigation (page refresh).
     event.preventDefault();
 
@@ -34,7 +40,7 @@ class UnconnectedLogin extends Component {
       const email = this.props.formEmail.trim() && this.props.formEmail.toLowerCase();
       const password = this.props.formPassword.trim();
 
-      this.props.dispatchLogin(email, password);
+      this.props.dispatchLogin(email, password, this.props.history);
     } else {
       this.email.isValid();
       this.password.isValid();
@@ -101,7 +107,7 @@ class UnconnectedLogin extends Component {
                   }}
                   validate={FormInput.validateEmailField}
                   value={this.props.formEmail}
-                  onChange={this.onChange.bind(this, 'email')}
+                  onChange={this.onEmailChange}
                   errorMessage="Email is invalid"
                   emptyMessage="Email can't be empty"
                 />
@@ -112,7 +118,7 @@ class UnconnectedLogin extends Component {
                     this.password = formInputObj;
                   }}
                   value={this.props.formPassword}
-                  onChange={this.onChange.bind(this, 'password')}
+                  onChange={this.onPasswordChange}
                   errorMessage="Password is invalid"
                   emptyMessage="Password can't be empty"
                 />
@@ -153,8 +159,8 @@ function mapDispatchToProps(dispatch) {
       dispatch(actionCreator.setFormField(field, value));
     },
 
-    dispatchLogin(email, password) {
-      dispatch(actionCreator.login(email, password));
+    dispatchLogin(email, password, history) {
+      dispatch(actionCreator.login(email, password, history));
     },
   };
 }

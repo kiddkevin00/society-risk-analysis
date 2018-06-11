@@ -17,7 +17,7 @@ export default class Events extends Component {
                         <h1>學會會刊</h1>
                         <h2>
                           <span>
-                            <a href="/home">Home</a> | 學會會刊
+                            <a href="/home">首頁</a> | 學會會刊
                           </span>
                         </h2>
                       </div>
@@ -33,7 +33,7 @@ export default class Events extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-                <h2>相關學會會刊一覽</h2>
+                <h2>學會會刊一覽</h2>
                 <p>
                   Even the all-powerful Pointing has no control about the blind texts it is an
                   almost unorthographic life One day however a small line of blind text by the name

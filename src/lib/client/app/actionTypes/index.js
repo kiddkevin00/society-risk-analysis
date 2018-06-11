@@ -11,6 +11,14 @@ const actionTypes = {
       FAILURE: 'LOGIN.BASIC_LOGIN_FAILURE',
     },
   },
+  SIGNUP: {
+    RESET_STATE: 'SIGN_UP.RESET_STATE',
+    CREATE_ACCOUNT: {
+      REQUEST: 'SIGN_UP.CREATE_ACCOUNT_REQUEST',
+      SUCCESS: 'SIGN_UP.CREATE_ACCOUNT_SUCCESS',
+      FAILURE: 'SIGN_UP.CREATE_ACCOUNT_FAILURE',
+    },
+  },
 };
 
 const namespaces = Object.keys(actionTypes).reduce((acc, type) => ({ ...acc, [type]: type }), {});

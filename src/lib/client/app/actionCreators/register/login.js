@@ -52,7 +52,8 @@ const loginActionCreator = {
         .then(() => {
           dispatch(this.loginSuccess());
 
-          history.push('/home');
+          //history.push('/events');
+          window.location.assign('/events');
         })
         .catch(error => {
           dispatch(this.loginFailure(error.message));
