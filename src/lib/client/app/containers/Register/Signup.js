@@ -74,32 +74,28 @@ class UnconnectedSignup extends Component {
       <div className="container">
         <div className="row">
           <div className="col-sm-7 text">
-            <h1>Adventure Awaits You</h1>
+            <h1>享有會員專屬待遇</h1>
             <div className="description">
               <p>
-                For only $12.50 a month, you will receive e-packages curated by the insight of
-                influential food bloggers and dessert connoisseurs! Within your e-package, you will
-                find a little background on each featured dessert vendor and your vouchers which can
-                claim in-store desserts or Sugarpost exclusives.
+                全球最專業的團隊，最齊全的資料庫，讓你一手掌握世界動態！
               </p>
             </div>
             <div className="top-big-link">
               <ol>
-                <li>Sign up to the right and become a paid subscriber.</li>
-                <li>Receive two vouchers during the first day of every month.</li>
-                <li>Visit the dessert shops.</li>
-                <li>Redeem desserts and enjoy!</li>
+                <li>一覽學術會刊</li>
+                <li>提供學術交流平台</li>
+                <li>學界最新消息盡在指尖</li>
               </ol>
             </div>
           </div>
           <div className="col-lg-offset-1 col-lg-4 col-sm-5">
             <div className="form-top">
               <div className="form-top-left">
-                <h3>Sign up now</h3>
-                <p>Fill in the form below to get started:</p>
+                <h3>加入會員</h3>
+                <p>填寫以下表格完成申請程序</p>
               </div>
               <div className="form-top-right">
-                <img src="/images/logo_sugarpost.png" alt="" />
+                <img src="/images/logo.jpg" alt="" />
               </div>
             </div>
             <div className="form-bottom">
@@ -113,7 +109,7 @@ class UnconnectedSignup extends Component {
                   &nbsp; {this.props.errorMsg}
                 </div>
                 <FormInput
-                  text="Full Name"
+                  text="團體或個人全名"
                   ref={formInputObj => {
                     this.fullName = formInputObj;
                   }}
@@ -123,7 +119,7 @@ class UnconnectedSignup extends Component {
                   emptyMessage="Full name can't be empty"
                 />
                 <FormInput
-                  text="Email Address"
+                  text="電子信箱"
                   ref={formInputObj => {
                     this.email = formInputObj;
                   }}
@@ -134,7 +130,7 @@ class UnconnectedSignup extends Component {
                   emptyMessage="Email can't be empty"
                 />
                 <FormInput
-                  text="Password"
+                  text="密碼"
                   type="password"
                   ref={formInputObj => {
                     this.password = formInputObj;
@@ -153,7 +149,7 @@ class UnconnectedSignup extends Component {
                   }
                 />
                 <FormInput
-                  text="Confirm Password"
+                  text="確認密碼"
                   type="password"
                   ref={formInputObj => {
                     this.confirmPassword = formInputObj;
@@ -165,7 +161,7 @@ class UnconnectedSignup extends Component {
                   errorMessage="Passwords don't match"
                 />
                 <button className="btn btn-block" type="submit">
-                  Sign Up
+                  立即加入
                 </button>
               </form>
 
@@ -173,10 +169,10 @@ class UnconnectedSignup extends Component {
                 <div className="col-xs-offset-1 col-xs-10">
                   <br />
                   <p className="text-center">
-                    By signing up, you agree to our
-                    <a href="/terms-of-use">&nbsp;Terms&nbsp;</a>
-                    &
-                    <a href="/privacy-policy">&nbsp;Privacy Policy&nbsp;</a>
+                    點擊注册，即表示你同意接受我們的
+                    <a href="/terms-of-use">&nbsp;條款&nbsp;</a>
+                    和
+                    <a href="/privacy-policy">&nbsp;數據使用政策&nbsp;</a>
                   </p>
                 </div>
               </div>

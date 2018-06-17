@@ -63,31 +63,28 @@ class UnconnectedLogin extends Component {
       <div className="container">
         <div className="row">
           <div className="col-sm-7 text">
-            <h1>Claim Your Desserts Today</h1>
+            <h1>會員專屬待遇</h1>
             <div className="description">
               <p>
-                Log in to change your account settings, view, email, or print your vouchers from
-                your purchased e-package, or get your referral code to share with your friends. Not
-                a paying subscriber yet? If you already have an account, log in to start your
-                subscription today!
+                最專業的團隊，最齊全的資料庫，讓你一手掌握世界動態！
               </p>
             </div>
             <div className="top-big-link">
               <ol>
-                <li>Learn more about this month’s featured vendors.</li>
-                <li>View your vouchers and claim your desserts.</li>
-                <li>Refer and earn credits.</li>
+                <li>提供學界最新消息</li>
+                <li>一覽學術會刊</li>
+                <li>提供學術交流平台</li>
               </ol>
             </div>
           </div>
           <div className="col-lg-offset-1 col-lg-4 col-sm-5">
             <div className="form-top">
               <div className="form-top-left">
-                <h3>Log in</h3>
-                <p>Fill in the form below to access your account:</p>
+                <h3>會員登入</h3>
+                <p>填寫以下表格完成會員登入：</p>
               </div>
               <div className="form-top-right">
-                <img src="/images/logo_sugarpost.png" alt="" />
+                <img src="/images/logo.jpg" alt="" />
               </div>
             </div>
             <div className="form-bottom">
@@ -101,7 +98,7 @@ class UnconnectedLogin extends Component {
                   &nbsp; {this.props.errorMsg}
                 </div>
                 <FormInput
-                  text="Email Address"
+                  text="電子信箱"
                   ref={formInputObj => {
                     this.email = formInputObj;
                   }}
@@ -112,7 +109,7 @@ class UnconnectedLogin extends Component {
                   emptyMessage="Email can't be empty"
                 />
                 <FormInput
-                  text="Password"
+                  text="密碼"
                   type="password"
                   ref={formInputObj => {
                     this.password = formInputObj;
@@ -123,13 +120,13 @@ class UnconnectedLogin extends Component {
                   emptyMessage="Password can't be empty"
                 />
                 <button className="btn btn-block" type="submit">
-                  Log In
+                  登入
                 </button>
               </form>
 
               <br />
               <a href="/register/forgot-password" className="center-block text-center">
-                Forgot password?
+                忘記密碼?
               </a>
             </div>
           </div>

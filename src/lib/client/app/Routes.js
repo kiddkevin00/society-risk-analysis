@@ -122,7 +122,7 @@ const Routes = ({ store }) => (
         <div
           id="colorlib-subscribe"
           className="subs-img"
-          style={{ backgroundImage: 'url(/images/img-bg-2.jpg' }}
+          style={{ backgroundImage: 'url(/images/img-bg-6_sra.jpg.jpg' }}
           data-stellar-background-ratio="0.5"
         >
           <div className="overlay" />

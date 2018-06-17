@@ -25,7 +25,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </li>
-              <li style={{ backgroundImage: 'url(/images/img-bg-2.jpg)' }}>
+              <li style={{ backgroundImage: 'url(/images/img-bg-2_sra.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
@@ -42,7 +42,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </li>
-              <li style={{ backgroundImage: 'url(/images/img-bg-3.jpg)' }}>
+              <li style={{ backgroundImage: 'url(/images/img-bg-5_sra.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
@@ -59,7 +59,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </li>
-              <li style={{ backgroundImage: 'url(/images/img-bg-4.jpg' }}>
+              <li style={{ backgroundImage: 'url(/images/img-bg-4_sra.jpg' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
@@ -323,7 +323,7 @@ export default class Home extends Component {
         <div
           id="colorlib-counter"
           className="colorlib-counters"
-          style={{ backgroundImage: 'url(/images/img-bg-2.jpg' }}
+          style={{ backgroundImage: 'url(/images/img-bg-5_sra.jpg.jpg' }}
           data-stellar-background-ratio="0.5"
         >
           <div className="overlay" />
