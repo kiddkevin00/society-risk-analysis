@@ -1,16 +1,70 @@
+import actionCreator from '../../actionCreators/register/signup';
 import { FormInput } from '../../components/';
 import cx from 'classnames';
+import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Signup extends Component {
+class UnconnectedSignup extends Component {
+  static propTypes = {
+    formFullName: PropTypes.string.isRequired,
+    formEmail: PropTypes.string.isRequired,
+    formPassword: PropTypes.string.isRequired,
+    formConfirmPassword: PropTypes.string.isRequired,
+    isCreatingAccount: PropTypes.bool.isRequired,
+    isErrorVisible: PropTypes.bool.isRequired,
+    errorMsg: PropTypes.string.isRequired,
+
+    dispatchResetState: PropTypes.func.isRequired,
+    dispatchSetFormField: PropTypes.func.isRequired,
+    dispatchCreateAccount: PropTypes.func.isRequired,
+
+    history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  };
+
+  componentWillUnmount() {
+    this.props.dispatchResetState();
+  }
+
+  onChange(field, value) {
+    this.props.dispatchSetFormField(field, value);
+  }
+
+  onFullNameChange = this.onChange.bind(this, 'fullName');
+
+  onEmailChange = this.onChange.bind(this, 'email');
+
+  onPasswordChange = this.onChange.bind(this, 'password');
+
+  onConfirmPasswordChange = this.onChange.bind(this, 'confirmPassword');
+
+  onSubmit = event => {
+    // Prevents browser's default navigation (page refresh).
+    event.preventDefault();
+
+    if (this.fullName.isValid() && this.email.isValid() && this.password.isValid() && this.confirmPassword.isValid()) {
+      const fullName = this.props.formFullName.trim();
+      const email = this.props.formEmail.trim() && this.props.formEmail.toLowerCase();
+      const password = this.props.formPassword.trim();
+
+      this.props.dispatchCreateAccount(fullName, email, password, this.props.history);
+    } else {
+      this.fullName.isValid();
+      this.email.isValid();
+      this.password.isValid();
+      this.confirmPassword.isValid();
+    }
+  };
+
+  isConfirmPasswordMatched = inputText => inputText === this.props.formPassword;
+
   render() {
     const alertBoxClasses = cx('alert', 'alert-danger', 'alert-dismissible', {
       collapse: !this.props.isErrorVisible,
     });
     let loader;
 
-    if (this.props.isLoading) {
+    if (this.props.isCreatingAccount) {
       loader = <div className="slow-loader" />;
     } else {
       loader = null;
@@ -49,7 +103,7 @@ class Signup extends Component {
               </div>
             </div>
             <div className="form-bottom">
-              <form onSubmit={this._onSubmit}>
+              <form onSubmit={this.onSubmit}>
                 {loader}
                 <div className={alertBoxClasses} role="alert">
                   <a className="close" data-dismiss="alert">
@@ -63,8 +117,8 @@ class Signup extends Component {
                   ref={formInputObj => {
                     this.fullName = formInputObj;
                   }}
-                  value=""
-                  onChange={() => {}}
+                  value={this.props.formFullName}
+                  onChange={this.onFullNameChange}
                   errorMessage="Full name is invalid"
                   emptyMessage="Full name can't be empty"
                 />
@@ -74,8 +128,8 @@ class Signup extends Component {
                     this.email = formInputObj;
                   }}
                   validate={FormInput.validateEmailField}
-                  value=""
-                  onChange={() => {}}
+                  value={this.props.formEmail}
+                  onChange={this.onEmailChange}
                   errorMessage="Email is invalid"
                   emptyMessage="Email can't be empty"
                 />
@@ -85,8 +139,8 @@ class Signup extends Component {
                   ref={formInputObj => {
                     this.password = formInputObj;
                   }}
-                  value=""
-                  onChange={() => {}}
+                  value={this.props.formPassword}
+                  onChange={this.onPasswordChange}
                   useValidator={true}
                   minCharacters={8}
                   requireCapitals={1}
@@ -105,8 +159,8 @@ class Signup extends Component {
                     this.confirmPassword = formInputObj;
                   }}
                   validate={this.isConfirmPasswordMatched}
-                  value=""
-                  onChange={() => {}}
+                  value={this.props.formConfirmPassword}
+                  onChange={this.onConfirmPasswordChange}
                   emptyMessage="Please confirm your password"
                   errorMessage="Passwords don't match"
                 />
@@ -134,4 +188,32 @@ class Signup extends Component {
   }
 }
 
-export { Signup as default };
+function mapStateToProps(state) {
+  return {
+    formFullName: state.signup.form.fullName.value,
+    formEmail: state.signup.form.email.value,
+    formPassword: state.signup.form.password.value,
+    formConfirmPassword: state.signup.form.confirmPassword.value,
+    isCreatingAccount: state.signup.main.isCreatingAccount,
+    isErrorVisible: state.signup.main.error.isVisible,
+    errorMsg: state.signup.main.error.message,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatchResetState() {
+      dispatch(actionCreator.resetState());
+    },
+
+    dispatchSetFormField(field, value) {
+      dispatch(actionCreator.setFormField(field, value));
+    },
+
+    dispatchCreateAccount(fullName, email, password) {
+      dispatch(actionCreator.createAccount(fullName, email, password));
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UnconnectedSignup);

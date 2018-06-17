@@ -1,13 +1,19 @@
-import * as http from './datasource';
-import buildLoadDataActionCreator from '../builders/loadData';
-import actionTypes, { namespaces } from '../../actionTypes/';
-import { redirectTo } from '../../utils/helpers';
+import actionTypes from '../actionTypes/';
 
 const { ME } = actionTypes;
 
-const meActionCreator = {
-  ...buildLoadDataActionCreator(namespaces.ME),
+const mockHttp = {
+  ensureAuthenticated() {
+    return Promise.resolve({
+      data: {
+        fullName: 'Test User',
+        email: 'user01@test.com',
+      },
+    });
+  },
+};
 
+const meActionCreator = {
   resetMainState() {
     return {
       type: ME.RESET_STATE,
@@ -17,8 +23,6 @@ const meActionCreator = {
   resetState() {
     return dispatch => {
       dispatch(this.resetMainState());
-
-      dispatch(this.resetLoadDataState());
     };
   },
 
@@ -26,36 +30,6 @@ const meActionCreator = {
     return {
       type: ME.SET_DATA,
       payload,
-    };
-  },
-
-  loadData() {
-    return async dispatch => {
-      try {
-        const { data: myPersonalInfoResData } = await http.getMyPersonalInfo();
-
-        dispatch(this.loadDataSuccess());
-
-        const payload = {};
-
-        if (myPersonalInfoResData.personId) {
-          payload.personId = myPersonalInfoResData.personId;
-        }
-
-        if (myPersonalInfoResData.firstName) {
-          payload.firstName = myPersonalInfoResData.firstName;
-        }
-
-        if (myPersonalInfoResData.lastName) {
-          payload.lastName = myPersonalInfoResData.lastName;
-        }
-
-        dispatch(this.setData(payload));
-      } catch (e) {
-        dispatch(this.loadDataFailure());
-
-        throw e;
-      }
     };
   },
 
@@ -77,32 +51,20 @@ const meActionCreator = {
     };
   },
 
-  checkAuthentication(redirectUrl = '/auth/login') {
-    return async dispatch => {
-      try {
-        await http.ensureAuthenticated();
-
-        dispatch(this.checkAuthenticationSuccess());
-      } catch (e) {
-        dispatch(this.checkAuthenticationFailure());
-
-        redirectTo(redirectUrl);
-
-        throw e;
-      }
-    };
-  },
-
-  initialize(redirectUrl) {
+  checkAuthentication() {
     return async dispatch => {
       try {
         dispatch(this.checkAuthenticationRequest());
-        dispatch(this.loadDataRequest());
 
-        await dispatch(this.checkAuthentication(redirectUrl));
-        await dispatch(this.loadData());
-      } catch (e) {
-        // No need to handle here. Let the `history` object do it own job.
+        const { data: myUserInfo } = await mockHttp.ensureAuthenticated();
+
+        dispatch(this.checkAuthenticationSuccess());
+
+        dispatch(this.setData(myUserInfo));
+      } catch (err) {
+        dispatch(this.checkAuthenticationFailure());
+
+        window.location.assign('/register/login');
       }
     };
   },

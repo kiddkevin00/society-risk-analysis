@@ -1,9 +1,15 @@
+import meActionCreator from '../me';
 import buildFormActionCreator from '../builders/form';
 import actionTypes, { namespaces } from '../../actionTypes/';
 
 const mockHttp = {
   createAccount(fullName, email, password) {
-    return Promise.resolve();
+    return Promise.resolve({
+      data: {
+        fullName: 'Test User',
+        email: 'user01@test.com',
+      },
+    });
   },
 };
 
@@ -44,20 +50,24 @@ const signupActionCreator = {
   },
 
   createAccount(fullName, email, password, history) {
-    return dispatch => {
-      dispatch(this.createAccountRequest());
+    return async dispatch => {
+      try {
+        dispatch(this.createAccountRequest());
 
-      return mockHttp
-        .createAccount(fullName, email, password)
-        .then(() => {
-          dispatch(this.createAccountSuccess());
+        const { data: myUserInfo } = await mockHttp.createAccount(fullName, email, password)
 
-          //history.push('/events');
-          window.location.assign('/events');
-        })
-        .catch(error => {
-          dispatch(this.createAccountFailure(error.message));
-        });
+        dispatch(this.createAccountSuccess());
+
+        dispatch(meActionCreator.checkAuthenticationSuccess());
+        dispatch(meActionCreator.setData(myUserInfo));
+
+        //history.push('/events');
+        window.location.assign('/events');
+      } catch (err) {
+        dispatch(this.createAccountFailure(err.message));
+
+
+      }
     };
   },
 };

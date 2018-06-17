@@ -2,20 +2,26 @@ import buildFormReducer from '../builders/form';
 import actionTypes, { namespaces } from '../../actionTypes/';
 import { combineReducers } from 'redux';
 
-const defaultErrorMsg = 'The username or password is incorrect.';
+const defaultErrorMsg = 'Something went wrong while signing up. Please try again.';
 const mainInitialState = {
   error: {
     isVisible: false,
     message: defaultErrorMsg,
   },
-  isLoggingIn: false,
+  isCreatingAccount: false,
 };
 
 const formInitialState = {
+  fullName: {
+    value: '',
+  },
   email: {
     value: '',
   },
   password: {
+    value: '',
+  },
+  confirmPassword: {
     value: '',
   },
 };
@@ -25,22 +31,22 @@ function mainReducer(state = mainInitialState, action) {
   const actionPayload = action.payload;
 
   switch (actionType) {
-    case actionTypes.LOGIN.BASIC_LOGIN.REQUEST:
+    case actionTypes.SIGNUP.CREATE_ACCOUNT.REQUEST:
       return {
         ...state,
-        isLoggingIn: true,
+        isCreatingAccount: true,
         error: {
           isVisible: false,
           message: defaultErrorMsg,
         },
       };
-    case actionTypes.LOGIN.RESET_STATE:
-    case actionTypes.LOGIN.BASIC_LOGIN.SUCCESS:
+    case actionTypes.SIGNUP.RESET_STATE:
+    case actionTypes.SIGNUP.CREATE_ACCOUNT.SUCCESS:
       return { ...mainInitialState };
-    case actionTypes.LOGIN.BASIC_LOGIN.FAILURE:
+    case actionTypes.SIGNUP.CREATE_ACCOUNT.FAILURE:
       return {
         ...state,
-        isLoggingIn: false,
+        isCreatingAccount: false,
         error: {
           isVisible: true,
           message: actionPayload.errorMsg,
@@ -51,9 +57,9 @@ function mainReducer(state = mainInitialState, action) {
   }
 }
 
-const loginReducer = combineReducers({
+const signupReducer = combineReducers({
   main: mainReducer,
-  form: buildFormReducer(formInitialState, namespaces.LOGIN),
+  form: buildFormReducer(formInitialState, namespaces.SIGNUP),
 });
 
-export { loginReducer as default };
+export { signupReducer as default };

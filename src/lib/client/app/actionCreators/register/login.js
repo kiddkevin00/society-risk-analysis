@@ -1,9 +1,15 @@
+import meActionCreator from '../me';
 import buildFormActionCreator from '../builders/form';
 import actionTypes, { namespaces } from '../../actionTypes/';
 
 const mockHttp = {
   login(username, password) {
-    return Promise.resolve();
+    return Promise.resolve({
+      data: {
+        fullName: 'Test User',
+        email: 'user01@test.com',
+      },
+    });
   },
 };
 
@@ -44,20 +50,22 @@ const loginActionCreator = {
   },
 
   login(username, password, history) {
-    return dispatch => {
-      dispatch(this.loginRequest());
+    return async dispatch => {
+      try {
+        dispatch(this.loginRequest());
 
-      return mockHttp
-        .login(username, password)
-        .then(() => {
-          dispatch(this.loginSuccess());
+        const { data: myUserInfo } = mockHttp.login(username, password)
 
-          //history.push('/events');
-          window.location.assign('/events');
-        })
-        .catch(error => {
-          dispatch(this.loginFailure(error.message));
-        });
+        dispatch(this.loginSuccess());
+
+        dispatch(meActionCreator.checkAuthenticationSuccess());
+        dispatch(meActionCreator.setData(myUserInfo));
+
+        //history.push('/events');
+        window.location.assign('/events');
+      } catch (err) {
+        dispatch(this.loginFailure(err.message));
+      }
     };
   },
 };

@@ -1,23 +1,16 @@
-import buildLoadDataReducer from './builders/loadData';
-import actionTypes, { namespaces } from '../actionTypes/';
-import { combineReducers } from 'redux';
+import actionTypes from '../actionTypes/';
 
 const { ME } = actionTypes;
 
-const mainInitialState = {
-  personId: undefined,
-  firstName: '',
-  lastName: '',
+const initialState = {
+  fullName: '',
+  email: '',
   hasBeenInitialized: false,
   isCheckingAuth: false,
   isAuthenticated: false,
 };
 
-const loadDataInitialState = {
-  isLoadingData: false,
-};
-
-const mainReducer = (state = mainInitialState, action) => {
+const meReducer = (state = initialState, action) => {
   const actionType = action.type;
   const actionPayload = action.payload;
 
@@ -43,14 +36,11 @@ const mainReducer = (state = mainInitialState, action) => {
         ...state,
         ...actionPayload,
       };
+    case ME.RESET_STATE:
+      return { ...initialState };
     default:
       return state;
   }
 };
-
-const meReducer = combineReducers({
-  main: mainReducer,
-  loadData: buildLoadDataReducer(loadDataInitialState, namespaces.ME),
-});
 
 export { meReducer as default };

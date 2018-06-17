@@ -1,4 +1,4 @@
-import actionCreator from '../../actionCreators/register/login'
+import actionCreator from '../../actionCreators/register/login';
 import { FormInput } from '../../components/';
 import cx from 'classnames';
 import { connect } from 'react-redux';
@@ -7,17 +7,17 @@ import PropTypes from 'prop-types';
 
 class UnconnectedLogin extends Component {
   static propTypes = {
-    dispatchResetState: PropTypes.func.isRequired,
-    dispatchSetFormField: PropTypes.func.isRequired,
-    dispatchLogin: PropTypes.func.isRequired,
-
     formEmail: PropTypes.string.isRequired,
     formPassword: PropTypes.string.isRequired,
     isLoggingIn: PropTypes.bool.isRequired,
     isErrorVisible: PropTypes.bool.isRequired,
     errorMsg: PropTypes.string.isRequired,
 
-    history: PropTypes.object.isRequired,
+    dispatchResetState: PropTypes.func.isRequired,
+    dispatchSetFormField: PropTypes.func.isRequired,
+    dispatchLogin: PropTypes.func.isRequired,
+
+    history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   };
 
   componentWillUnmount() {
@@ -26,7 +26,7 @@ class UnconnectedLogin extends Component {
 
   onChange(field, value) {
     this.props.dispatchSetFormField(field, value);
-  };
+  }
 
   onEmailChange = this.onChange.bind(this, 'email');
 
