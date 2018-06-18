@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5, h6, figure {
           #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn {
             color: #fff; }
           #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn:hover {
-            background: #000 !important; }
+            background: #892c1c !important; }
           @media screen and (max-width: 480px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
               width: 100%; } }
@@ -1419,7 +1419,7 @@ input[type="text"] {
     width: 50px;
     height: 50px;
     display: table;
-    background: black;
+    background: #892c1c;
     color: #fff;
     text-align: center;
     -webkit-border-radius: 50%;
@@ -1549,10 +1549,10 @@ input[type="text"] {
 .btn-primary {
   background: #892c1c;
   color: #fff;
-  border: 2px solid #429FFD; }
+  border: 2px solid #892c1c; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background: #5bacfd !important;
-    border-color: #5bacfd !important; }
+    background: rgba(137, 44, 28, 0.8) !important;
+    border-color: rgba(137, 44, 28, 0.8) !important; }
   .btn-primary.btn-outline {
     background: transparent;
     color: #429FFD;

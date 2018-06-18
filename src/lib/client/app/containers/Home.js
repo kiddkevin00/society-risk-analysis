@@ -16,8 +16,8 @@ export default class Home extends Component {
                       <div className="slider-text-inner text-center">
                         <h1>亞洲最大風險分析學會</h1>
                         <p>
-                          <a href="/news" className="btn btn-primary btn-lg btn-learn">
-                            追蹤我們
+                          <a href="/register/signup" className="btn btn-primary btn-lg btn-learn">
+                            加入會員
                           </a>
                         </p>
                       </div>
@@ -33,8 +33,8 @@ export default class Home extends Component {
                       <div className="slider-text-inner text-center">
                         <h1>長達近四十年的歷史</h1>
                         <p>
-                          <a href="/register/signup" className="btn btn-primary btn-lg btn-learn">
-                            加入會員
+                          <a href="/news" className="btn btn-primary btn-lg btn-learn">
+                            追蹤我們
                           </a>
                         </p>
                       </div>
@@ -50,8 +50,8 @@ export default class Home extends Component {
                       <div className="slider-text-inner text-center">
                         <h1>擁有最多高度影響指數的學術期刊</h1>
                         <p>
-                          <a href="/news" className="btn btn-primary btn-lg btn-learn">
-                            追蹤近況
+                          <a href="/register/signup" className="btn btn-primary btn-lg btn-learn">
+                            加入我們
                           </a>
                         </p>
                       </div>
@@ -67,8 +67,8 @@ export default class Home extends Component {
                       <div className="slider-text-inner text-center">
                         <h1>據點遍布世界</h1>
                         <p>
-                          <a href="/register/signup" className="btn btn-primary btn-lg btn-learn">
-                            加入我們
+                          <a href="/news" className="btn btn-primary btn-lg btn-learn">
+                            追蹤近況
                           </a>
                         </p>
                       </div>
