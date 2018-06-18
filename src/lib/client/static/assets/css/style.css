@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5, h6, figure {
           #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn {
             color: #fff; }
           #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn:hover {
-            background: #892c1c !important; }
+            background: rgba(137, 44, 28, 0.6) !important; }
           @media screen and (max-width: 480px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
               width: 100%; } }
@@ -1551,8 +1551,8 @@ input[type="text"] {
   color: #fff;
   border: 2px solid #892c1c; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background: rgba(137, 44, 28, 0.8) !important;
-    border-color: rgba(137, 44, 28, 0.8) !important; }
+    background: rgba(137, 44, 28, 0.6) !important;
+    border-color: rgba(137, 44, 28, 0.6) !important; }
   .btn-primary.btn-outline {
     background: transparent;
     color: #429FFD;

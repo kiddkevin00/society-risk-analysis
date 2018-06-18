@@ -11,7 +11,7 @@
     "lint:js": "eslint --format 'node_modules/eslint-friendly-formatter' --ext .js,.jsx src/lib/client/app/ src/lib/server/ src/spec/ bin/ stories/ webpack.config.js",
     "lint:styles": "stylelint 'src/lib/**/*.scss'",
     "-------------- LOCAL DEV ------------": "",
-    "dev": "NODE_ENV=development webpack-dev-server",
+    "dev": "NODE_ENV=development webpack-dev-server --port 8088",
     "dev:server": "NODE_ENV=development webpack --watch & NODE_ENV=development nodemon src/lib/server/",
     "prettify": "prettier --single-quote --jsx-bracket-same-line --print-width 100 --trailing-comma es5 \"./src/**/*.js\" ./stories --write"
   },
