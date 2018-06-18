@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default class Contact extends Component {
   render() {
     return (
-      <section>
+      <section style={{ backgroundColor: 'white' }}>
         <aside id="colorlib-hero">
           <div className="flexslider">
             <ul className="slides">
