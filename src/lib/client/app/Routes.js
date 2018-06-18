@@ -15,10 +15,10 @@ const Routes = ({ store }) => (
           <div className="upper-menu">
             <div className="container">
               <div className="row">
-                <div className="col-xs-4">
-                  <p>Welcome to SRA</p>
+                <div className="col-xs-6">
+                  <p>Welcome to Taiwan Society for Risk Analysis</p>
                 </div>
-                <div className="col-xs-6 col-md-push-2 text-right">
+                <div className="col-xs-4 col-xs-push-2 text-right">
                   {/*
                   <p>
                     <ul className="colorlib-social-icons">
@@ -55,12 +55,15 @@ const Routes = ({ store }) => (
           <div className="top-menu">
             <div className="container">
               <div className="row">
-                <div className="col-md-2">
+                <div className="col-md-4">
                   <div id="colorlib-logo">
-                    <a href="/home">風險分析學會</a>
+                    <a href="/home">
+                      <img style={{ width: '36px', height: '36px' }} src="/images/logo.jpg" alt="" />
+                      &nbsp; 台灣風險分析學會
+                    </a>
                   </div>
                 </div>
-                <div className="col-md-10 text-right menu-1">
+                <div className="col-md-8 text-right menu-1">
                   <ul>
                     <li className={cx({ active: window.location.pathname === '/home' })}>
                       <a href="/home">首頁</a>
