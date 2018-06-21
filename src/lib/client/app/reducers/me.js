@@ -1,8 +1,10 @@
-import actionTypes from '../actionTypes/';
+import buildFormReducer from './builders/form';
+import actionTypes, { namespaces } from '../actionTypes/';
+import { combineReducers } from 'redux';
 
 const { ME } = actionTypes;
 
-const initialState = {
+const mainInitialState = {
   fullName: '',
   email: '',
   hasBeenInitialized: false,
@@ -10,7 +12,13 @@ const initialState = {
   isAuthenticated: false,
 };
 
-const meReducer = (state = initialState, action) => {
+const formInitialState = {
+  email: {
+    value: '',
+  },
+};
+
+const mainReducer = (state = mainInitialState, action) => {
   const actionType = action.type;
   const actionPayload = action.payload;
 
@@ -37,10 +45,15 @@ const meReducer = (state = initialState, action) => {
         ...actionPayload,
       };
     case ME.RESET_STATE:
-      return { ...initialState };
+      return { ...mainInitialState };
     default:
       return state;
   }
 };
+
+const meReducer = combineReducers({
+  main: mainReducer,
+  form: buildFormReducer(formInitialState, namespaces.ME),
+});
 
 export { meReducer as default };

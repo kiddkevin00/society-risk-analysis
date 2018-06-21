@@ -1,6 +1,7 @@
 import meActionCreator from '../me';
 import buildFormActionCreator from '../builders/form';
 import actionTypes, { namespaces } from '../../actionTypes/';
+import { redirectTo } from '../../utils/helpers';
 
 const mockHttp = {
   createAccount(fullName, email, password) {
@@ -62,7 +63,7 @@ const signupActionCreator = {
         dispatch(meActionCreator.setData(myUserInfo));
 
         //history.push('/events');
-        window.location.assign('/events');
+        redirectTo('/events');
       } catch (err) {
         dispatch(this.createAccountFailure(err.message));
 

@@ -44,7 +44,7 @@ class UnconnectedSignup extends Component {
 
     if (this.fullName.isValid() && this.email.isValid() && this.password.isValid() && this.confirmPassword.isValid()) {
       const fullName = this.props.formFullName.trim();
-      const email = this.props.formEmail.trim() && this.props.formEmail.toLowerCase();
+      const email = this.props.formEmail.trim() && this.props.formEmail.trim().toLowerCase();
       const password = this.props.formPassword.trim();
 
       this.props.dispatchCreateAccount(fullName, email, password, this.props.history);

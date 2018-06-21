@@ -1,6 +1,7 @@
-import meActionCreator from '../me';
-import buildFormActionCreator from '../builders/form';
-import actionTypes, { namespaces } from '../../actionTypes/';
+import meActionCreator from '../../me';
+import buildFormActionCreator from '../../builders/form';
+import actionTypes, { namespaces } from '../../../actionTypes/';
+import { redirectTo } from '../../../utils/helpers';
 
 const mockHttp = {
   login(username, password) {
@@ -62,7 +63,7 @@ const loginActionCreator = {
         dispatch(meActionCreator.setData(myUserInfo));
 
         //history.push('/events');
-        window.location.assign('/events');
+        redirectTo('/events');
       } catch (err) {
         dispatch(this.loginFailure(err.message));
       }

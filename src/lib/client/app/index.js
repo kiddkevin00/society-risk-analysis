@@ -1,5 +1,5 @@
 import createStore from './store/';
-import Routes from './Routes';
+import App from './App';
 import Promise from 'promise-polyfill';
 import { render } from 'react-dom';
 import React from 'react';
@@ -13,4 +13,4 @@ if (!window.Promise) {
 const initialState = window.INITIAL_STATE;
 const store = createStore(initialState);
 
-render(<Routes store={store} />, window.document.getElementById('sra-react-root'));
+render(<App store={store} />, window.document.getElementById('sra-react-root'));

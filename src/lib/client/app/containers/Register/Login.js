@@ -1,4 +1,4 @@
-import actionCreator from '../../actionCreators/register/login';
+import actionCreator from '../../actionCreators/register/login/';
 import { FormInput } from '../../components/';
 import cx from 'classnames';
 import { connect } from 'react-redux';
@@ -37,7 +37,7 @@ class UnconnectedLogin extends Component {
     event.preventDefault();
 
     if (this.email.isValid() && this.password.isValid()) {
-      const email = this.props.formEmail.trim() && this.props.formEmail.toLowerCase();
+      const email = this.props.formEmail.trim() && this.props.formEmail.trim().toLowerCase();
       const password = this.props.formPassword.trim();
 
       this.props.dispatchLogin(email, password, this.props.history);

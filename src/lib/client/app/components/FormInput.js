@@ -4,6 +4,54 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 class FormInput extends Component {
+  static propTypes = {
+    onChange: PropTypes.func.isRequired,
+    value: PropTypes.string.isRequired,
+    validate: PropTypes.func,
+    useValidator: PropTypes.bool,
+    emptyMessage: PropTypes.string,
+    errorMessage: PropTypes.string,
+    minCharacters: PropTypes.number,
+    requireCapitals: PropTypes.number,
+    requireNumbers: PropTypes.number,
+    forbiddenWords: PropTypes.arrayOf(PropTypes.string),
+    text: PropTypes.string,
+    type: PropTypes.string,
+    disabled: PropTypes.bool,
+    className: PropTypes.string,
+    placeholder: PropTypes.string,
+  };
+
+  static defaultProps = {
+    validate: FormInput.validateEmptyField,
+    useValidator: false,
+    emptyMessage: 'Empty',
+    errorMessage: 'Invalid',
+    minCharacters: 8,
+    requireCapitals: 1,
+    requireNumbers: 1,
+    forbiddenWords: ['password', 'user'],
+    text: 'Unknown Field',
+    type: 'text',
+    disabled: false,
+    className: '',
+    placeholder: '',
+  };
+
+  static validateEmptyField(inputText) {
+    return !!inputText && inputText.trim().length !== 0;
+  }
+
+  static validateEmailField(inputText) {
+    const regExp = new RegExp(
+      '^(([^<>()[\\]\\\\.,;:\\s@\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\"]+)*)|' +
+      '(\\".+\\"))@((\\[[0-9]{1,3}.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|' +
+      '(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$'
+    );
+
+    return regExp.test(inputText);
+  }
+
   constructor(props) {
     super(props);
 
@@ -44,68 +92,6 @@ class FormInput extends Component {
         value: newProps.value,
       });
     }
-  }
-
-  render() {
-    const inputGroupClassName = cx('input_group_template', {
-      input_valid: this.state.valid,
-      input_error: !this.state.valid,
-      input_empty: this.state.empty,
-      input_hasValue: !this.state.empty,
-      input_focused: this.state.focus,
-      input_unfocused: !this.state.focus,
-    });
-    let validator;
-
-    if (this.props.useValidator) {
-      validator = (
-        <PasswordValidator
-          visible={this.state.isValidatorVisible}
-          name={this.props.text}
-          value={this.state.value}
-          validData={this.state.isEachValidatorValid}
-          valid={this.state.isAllValidatorValid}
-          forbiddenWords={this.props.forbiddenWords}
-          minCharacters={this.props.minCharacters}
-          requireCapitals={this.props.requireCapitals}
-          requireNumbers={this.props.requireNumbers}
-        />
-      );
-    } else {
-      validator = null;
-    }
-
-    return (
-      <div className={inputGroupClassName}>
-        <label className="input_label" htmlFor={this.props.text}>
-          <span className="label_text">{this.props.text}</span>
-        </label>
-        <input
-          className="input"
-          id={this.props.text}
-          value={this.state.value}
-          onChange={this._onChange}
-          onFocus={this._handleFocus}
-          onBlur={this._handleBlur}
-          autoComplete="off"
-          type={this.props.type}
-          disabled={this.props.disabled}
-        />
-        <FormInputError
-          visible={this.state.isErrorVisible}
-          errorMessage={this.state.errorMessage}
-        />
-        <div className="validationIcons">
-          <i className="input_error_icon">
-            <CustomIcon type="circle_error" />
-          </i>
-          <i className="input_valid_icon">
-            <CustomIcon type="circle_tick" />
-          </i>
-        </div>
-        {validator}
-      </div>
-    );
   }
 
   _onChange = event => {
@@ -210,47 +196,69 @@ class FormInput extends Component {
     return isValid;
   };
 
-  static validateEmptyField(inputText) {
-    return !!inputText && inputText.trim().length !== 0;
-  }
+  render() {
+    const inputGroupClassName = cx('input_group_template', {
+      input_valid: this.state.valid,
+      input_error: !this.state.valid,
+      input_empty: this.state.empty,
+      input_hasValue: !this.state.empty,
+      input_focused: this.state.focus,
+      input_unfocused: !this.state.focus,
+    });
+    const inputClassName = cx('input', this.props.className);
+    let validator;
 
-  static validateEmailField(inputText) {
-    const regExp = new RegExp(
-      '^(([^<>()[\\]\\\\.,;:\\s@\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\"]+)*)|' +
-        '(\\".+\\"))@((\\[[0-9]{1,3}.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|' +
-        '(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$'
+    if (this.props.useValidator) {
+      validator = (
+        <PasswordValidator
+          visible={this.state.isValidatorVisible}
+          name={this.props.text}
+          value={this.state.value}
+          validData={this.state.isEachValidatorValid}
+          valid={this.state.isAllValidatorValid}
+          forbiddenWords={this.props.forbiddenWords}
+          minCharacters={this.props.minCharacters}
+          requireCapitals={this.props.requireCapitals}
+          requireNumbers={this.props.requireNumbers}
+        />
+      );
+    } else {
+      validator = null;
+    }
+
+    return (
+      <div className={inputGroupClassName}>
+        <label className="input_label" htmlFor={this.props.text}>
+          <span className="label_text">{this.props.text}</span>
+        </label>
+        <input
+          className={inputClassName}
+          id={this.props.text}
+          value={this.state.value}
+          onChange={this._onChange}
+          onFocus={this._handleFocus}
+          onBlur={this._handleBlur}
+          autoComplete="off"
+          type={this.props.type}
+          disabled={this.props.disabled}
+          placeholder={this.props.placeholder}
+        />
+        <FormInputError
+          visible={this.state.isErrorVisible}
+          errorMessage={this.state.errorMessage}
+        />
+        <div className="validationIcons">
+          <i className="input_error_icon">
+            <CustomIcon type="circle_error" />
+          </i>
+          <i className="input_valid_icon">
+            <CustomIcon type="circle_tick" />
+          </i>
+        </div>
+        {validator}
+      </div>
     );
-
-    return regExp.test(inputText);
   }
 }
-FormInput.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
-  validate: PropTypes.func,
-  useValidator: PropTypes.bool,
-  emptyMessage: PropTypes.string,
-  errorMessage: PropTypes.string,
-  minCharacters: PropTypes.number,
-  requireCapitals: PropTypes.number,
-  requireNumbers: PropTypes.number,
-  forbiddenWords: PropTypes.arrayOf(PropTypes.string),
-  text: PropTypes.string,
-  type: PropTypes.string,
-  disabled: PropTypes.bool,
-};
-FormInput.defaultProps = {
-  validate: FormInput.validateEmptyField,
-  useValidator: false,
-  emptyMessage: 'Empty',
-  errorMessage: 'Invalid',
-  minCharacters: 8,
-  requireCapitals: 1,
-  requireNumbers: 1,
-  forbiddenWords: ['password', 'user'],
-  text: 'Unknown Field',
-  type: 'text',
-  disabled: false,
-};
 
-export default FormInput;
+export { FormInput as default };

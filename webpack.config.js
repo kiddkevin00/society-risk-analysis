@@ -138,7 +138,7 @@ module.exports = {
       },
       {
         context: path.resolve(__dirname, './src/lib/client/static/assets/', 'js/'),
-        from: '*.js',
+        from: '*',
         to: path.resolve(__dirname, './build/', 'js/'),
       },
       {

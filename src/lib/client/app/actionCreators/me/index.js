@@ -1,4 +1,7 @@
-import actionTypes from '../actionTypes/';
+import * as http from './datasource';
+import buildFormActionCreator from '../builders/form';
+import actionTypes, { namespaces } from '../../actionTypes/';
+import { redirectTo } from '../../utils/helpers';
 
 const { ME } = actionTypes;
 
@@ -14,6 +17,8 @@ const mockHttp = {
 };
 
 const meActionCreator = {
+  ...buildFormActionCreator(namespaces.ME),
+
   resetMainState() {
     return {
       type: ME.RESET_STATE,
@@ -64,7 +69,39 @@ const meActionCreator = {
       } catch (err) {
         dispatch(this.checkAuthenticationFailure());
 
-        window.location.assign('/register/login');
+        redirectTo('/register/login');
+      }
+    };
+  },
+
+  subscribeToEmailListRequest() {
+    return {
+      type: ME.CHECK_AUTH.REQUEST,
+    };
+  },
+
+  subscribeToEmailListSuccess() {
+    return {
+      type: ME.CHECK_AUTH.SUCCESS,
+    };
+  },
+
+  subscribeToEmailListFailure() {
+    return {
+      type: ME.CHECK_AUTH.FAILURE,
+    };
+  },
+
+  subscribeToEmailList(email) {
+    return async dispatch => {
+      try {
+        dispatch(this.subscribeToEmailListRequest());
+
+        await http.subscribeToEmailList(email);
+
+        dispatch(this.subscribeToEmailListSuccess());
+      } catch (err) {
+        dispatch(this.subscribeToEmailListFailure());
       }
     };
   },

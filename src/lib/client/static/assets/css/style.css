@@ -1229,12 +1229,13 @@ input[type="text"] {
       color: rgba(255, 255, 255, 0.6); }
     .qbstp-header-subscribe .form-group input::input-placeholder {
       color: rgba(255, 255, 255, 0.6); }
-  .qbstp-header-subscribe #email {
+  .qbstp-header-subscribe input {
     font-size: 14px;
     width: 100%;
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.6); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    height: 50px !important;
+    color: rgba(255, 255, 255, 0.6) !important; }
   .qbstp-header-subscribe button {
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
