@@ -40,7 +40,6 @@ class UnconnectedLayout extends Component {
     }
   };
 
-
   render() {
     return (
       <section>
@@ -149,7 +148,7 @@ class UnconnectedLayout extends Component {
           <div
             id="colorlib-subscribe"
             className="subs-img"
-            style={{ backgroundImage: 'url(/images/img-bg-6_sra.jpg.jpg' }}
+            style={{ backgroundImage: 'url(/images/img-bg-6_sra.jpg' }}
             data-stellar-background-ratio="0.5"
           >
             <div className="overlay" />

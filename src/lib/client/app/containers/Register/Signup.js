@@ -1,4 +1,4 @@
-import actionCreator from '../../actionCreators/register/signup';
+import actionCreator from '../../actionCreators/register/signup/';
 import { FormInput } from '../../components/';
 import cx from 'classnames';
 import { connect } from 'react-redux';

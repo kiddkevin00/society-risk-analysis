@@ -1,8 +1,6 @@
+import StandardResponseWrapper from './standard-response-wrapper';
+import StandardErrorWrapper from './standard-error-wrapper';
 import axios from 'axios';
-
-const supportedErrorCodes = {
-  //INSUFFICIENT_PERMISSIONS: 'INSUFFICIENT_PERMISSIONS',
-};
 
 const throwErrorWithCodeAndMsg = ({ code, message }) => {
   const error = new Error(message);
@@ -11,15 +9,15 @@ const throwErrorWithCodeAndMsg = ({ code, message }) => {
 
   return error;
 };
-const getErrorCodeAndMsg = errors => ({
-  code:
-    (Array.isArray(errors) && errors[0] && supportedErrorCodes[errors[0].code]) || 'UNKNOWN_ERROR',
-  message:
-    (Array.isArray(errors) && errors[0] && errors[0].message) ||
-    'Something went wrong while making HTTP requests.',
+const getErrorCodeAndMsg = error => ({
+  code: error.code || 'UNKNOWN_ERROR',
+  message: error.message || 'Something went wrong while making a HTTP request.',
 });
 const extractErrorListFromResponse = error =>
-  error.response && error.response.data ? error.response.data.errors : error;
+  error.response && StandardResponseWrapper.verifyFormat(error.response.data) &&
+  StandardResponseWrapper.deserialize(error.response.data).getNthData(0) &&
+  StandardErrorWrapper.verifyFormat(StandardResponseWrapper.deserialize(error.response.data).getNthData(0).detail) &&
+  StandardErrorWrapper.deserialize(StandardResponseWrapper.deserialize(error.response.data).getNthData(0).detail).getNthError(0) || error
 const handleError = error =>
   throwErrorWithCodeAndMsg(getErrorCodeAndMsg(extractErrorListFromResponse(error)));
 
@@ -34,6 +32,7 @@ class HttpClient {
 
       return {
         ...config,
+        withCredentials: true,
         headers: {
           ...config.headers,
           ...reqHeader,
@@ -47,4 +46,4 @@ class HttpClient {
   }
 }
 
-export { HttpClient as default, supportedErrorCodes };
+export { HttpClient as default };

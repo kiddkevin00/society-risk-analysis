@@ -5,9 +5,10 @@ import { combineReducers } from 'redux';
 const { ME } = actionTypes;
 
 const mainInitialState = {
+  _id: '',
   fullName: '',
   email: '',
-  hasBeenInitialized: false,
+  hasCheckedAuth: false,
   isCheckingAuth: false,
   isAuthenticated: false,
 };
@@ -28,14 +29,14 @@ const mainReducer = (state = mainInitialState, action) => {
         ...state,
         isCheckingAuth: false,
         isAuthenticated: false,
-        hasBeenInitialized: true,
+        hasCheckedAuth: true,
       };
     case ME.CHECK_AUTH.SUCCESS:
       return {
         ...state,
         isCheckingAuth: false,
         isAuthenticated: true,
-        hasBeenInitialized: true,
+        hasCheckedAuth: true,
       };
     case ME.CHECK_AUTH.REQUEST:
       return { ...state, isCheckingAuth: true };

@@ -323,7 +323,7 @@ export default class Home extends Component {
         <div
           id="colorlib-counter"
           className="colorlib-counters"
-          style={{ backgroundImage: 'url(/images/img-bg-5_sra.jpg.jpg' }}
+          style={{ backgroundImage: 'url(/images/img-bg-5_sra.jpg' }}
           data-stellar-background-ratio="0.5"
         >
           <div className="overlay" />
@@ -547,16 +547,12 @@ export default class Home extends Component {
           </div>
         </div>
 
-        {/*
         <div className="colorlib-event">
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-                <h2>Upcoming Events</h2>
-                <p>
-                  Even the all-powerful Pointing has no control about the blind texts it is an
-                  almost unorthographic life One day however a small line of blind text by the name
-                </p>
+                <h2>最新消息</h2>
+                <p>我們會即時更新最新消息，讓你輕鬆跟上學界動態。</p>
               </div>
             </div>
             <div className="event-flex row-pb-sm">
@@ -570,21 +566,27 @@ export default class Home extends Component {
                     <div className="event-entry">
                       <div className="desc">
                         <p className="meta">
-                          <span className="day">19</span>
-                          <span className="month">Apr</span>
+                          <span className="day">28</span>
+                          <span className="month">May</span>
                         </p>
                         <p className="organizer">
-                          <span>Organized by:</span> <span>Noah Henderson</span>
+                          <span>
+                            <a target="_blank" href="http://www.sra.org/2018-annual-meeting">
+                              點此查看活動連結
+                            </a>
+                          </span>
                         </p>
                         <h2>
-                          <a href="event.html">We Held Free Training for Basic Programming</a>
+                          <span>2018美國紐奧良SRA總會年會</span>
                         </h2>
                       </div>
                       <div className="location">
                         <span className="icon">
                           <i className="icon-map" />
                         </span>
-                        <p>291 South 21th Street, Suite 721 New York NY 10016</p>
+                        <p>
+                          各位會員先進：一年一度的SRA總會年會，於今年12月2-6日於美國紐奧良舉行，歡迎會員踴躍投稿！鼓勵各位會員踴躍提出symposium提案。
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -592,21 +594,28 @@ export default class Home extends Component {
                     <div className="event-entry">
                       <div className="desc">
                         <p className="meta">
-                          <span className="day">19</span>
-                          <span className="month">Apr</span>
+                          <span className="day">17</span>
+                          <span className="month">Jan</span>
                         </p>
                         <p className="organizer">
-                          <span>Organized by:</span> <span>Noah Henderson</span>
+                          <span>
+                            <a target="_blank" href="https://goo.gl/mrJBLj">
+                              點此查看詳細會議議程
+                            </a>
+                          </span>
                         </p>
                         <h2>
-                          <a href="event.html">You're Invited 1st Anniversary of Eskwela</a>
+                          <span>2018台灣風險分析學會年會暨研討會當日資訊</span>
                         </h2>
                       </div>
                       <div className="location">
                         <span className="icon">
                           <i className="icon-map" />
                         </span>
-                        <p>291 South 21th Street, Suite 721 New York NY 10016</p>
+                        <p>
+                          本學會之年會暨研討會將於 2018 年 1 月 19
+                          日星期五於國立成功大學舉行，歡迎各風險分析領域相關先進蒞臨會場，共襄盛舉。
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -614,21 +623,28 @@ export default class Home extends Component {
                     <div className="event-entry">
                       <div className="desc">
                         <p className="meta">
-                          <span className="day">19</span>
-                          <span className="month">Apr</span>
+                          <span className="day">25</span>
+                          <span className="month">Nov</span>
                         </p>
                         <p className="organizer">
-                          <span>Organized by:</span> <span>Noah Henderson</span>
+                          <span>
+                            <a target="_blank" href="https://sra-taiwan.firebaseapp.com/News.html?1">
+                              點此查看投稿詳情
+                            </a>
+                          </span>
                         </p>
                         <h2>
-                          <a href="event.html">Practice Workshop 2018</a>
+                          <span>2018台灣風險分析學會年會暨研討會論文摘要徵稿</span>
                         </h2>
                       </div>
                       <div className="location">
                         <span className="icon">
                           <i className="icon-map" />
                         </span>
-                        <p>291 South 21th Street, Suite 721 New York NY 10016</p>
+                        <p>
+                          台灣風險分析學會將於 2018 年 1 月 19 日（五）舉辦「2018
+                          台灣風險分析學會年會暨研討會」，邀請國內外風險分析相關學者齊聚一堂，針對風險分析於建構韌性社會之角色與定位、食品安全、災防管理、環境風險、永續發展、職業安全衛生、資訊安全與相關風險社會治理經驗相關議題進行交流。
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -638,11 +654,12 @@ export default class Home extends Component {
           </div>
         </div>
 
+        {/*
         <div className="colorlib-blog colorlib-light-grey">
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-                <h2>Recent News</h2>
+                <h2>Recent Events</h2>
                 <p>
                   Even the all-powerful Pointing has no control about the blind texts it is an
                   almost unorthographic life One day however a small line of blind text by the name

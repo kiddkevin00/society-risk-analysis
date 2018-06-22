@@ -5,17 +5,6 @@ import { redirectTo } from '../../utils/helpers';
 
 const { ME } = actionTypes;
 
-const mockHttp = {
-  ensureAuthenticated() {
-    return Promise.resolve({
-      data: {
-        fullName: 'Test User',
-        email: 'user01@test.com',
-      },
-    });
-  },
-};
-
 const meActionCreator = {
   ...buildFormActionCreator(namespaces.ME),
 
@@ -61,7 +50,9 @@ const meActionCreator = {
       try {
         dispatch(this.checkAuthenticationRequest());
 
-        const { data: myUserInfo } = await mockHttp.ensureAuthenticated();
+        const { data: myUserInfo } = await http.checkAuthentication();
+
+        // TODO
 
         dispatch(this.checkAuthenticationSuccess());
 
@@ -100,6 +91,8 @@ const meActionCreator = {
         await http.subscribeToEmailList(email);
 
         dispatch(this.subscribeToEmailListSuccess());
+
+        redirectTo('/home');
       } catch (err) {
         dispatch(this.subscribeToEmailListFailure());
       }

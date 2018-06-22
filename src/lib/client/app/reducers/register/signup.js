@@ -13,16 +13,16 @@ const mainInitialState = {
 
 const formInitialState = {
   fullName: {
-    value: '',
+    value: 'test',
   },
   email: {
-    value: '',
+    value: 'user101@test.com',
   },
   password: {
-    value: '',
+    value: 'P@ssw0rd',
   },
   confirmPassword: {
-    value: '',
+    value: 'P@ssw0rd',
   },
 };
 
