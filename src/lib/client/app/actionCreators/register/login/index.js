@@ -1,18 +1,9 @@
+import * as http from './datasource';
 import meActionCreator from '../../me';
+import StandardResponseWrapper from '../../../utils/standard-response-wrapper';
 import buildFormActionCreator from '../../builders/form';
 import actionTypes, { namespaces } from '../../../actionTypes/';
 import { redirectTo } from '../../../utils/helpers';
-
-const mockHttp = {
-  login(username, password) {
-    return Promise.resolve({
-      data: {
-        fullName: 'Test User',
-        email: 'user01@test.com',
-      },
-    });
-  },
-};
 
 const loginActionCreator = {
   ...buildFormActionCreator(namespaces.LOGIN),
@@ -55,7 +46,8 @@ const loginActionCreator = {
       try {
         dispatch(this.loginRequest());
 
-        const { data: myUserInfo } = mockHttp.login(username, password)
+        const { data: myUserInfoResponse } = await http.login(username, password);
+        const myUserInfo = StandardResponseWrapper.deserialize(myUserInfoResponse).getNthData(0).detail;
 
         dispatch(this.loginSuccess());
 

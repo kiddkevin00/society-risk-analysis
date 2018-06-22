@@ -1,4 +1,5 @@
 import * as http from './datasource';
+import StandardResponseWrapper from '../../utils/standard-response-wrapper';
 import buildFormActionCreator from '../builders/form';
 import actionTypes, { namespaces } from '../../actionTypes/';
 import { redirectTo } from '../../utils/helpers';
@@ -50,12 +51,10 @@ const meActionCreator = {
       try {
         dispatch(this.checkAuthenticationRequest());
 
-        const { data: myUserInfo } = await http.checkAuthentication();
-
-        // TODO
+        const { data: myUserInfoResponse } = await http.checkAuthentication();
+        const myUserInfo = StandardResponseWrapper.deserialize(myUserInfoResponse).getNthData(0).detail;
 
         dispatch(this.checkAuthenticationSuccess());
-
         dispatch(this.setData(myUserInfo));
       } catch (err) {
         dispatch(this.checkAuthenticationFailure());

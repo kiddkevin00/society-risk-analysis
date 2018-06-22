@@ -5,17 +5,6 @@ import buildFormActionCreator from '../../builders/form';
 import actionTypes, { namespaces } from '../../../actionTypes/';
 import { redirectTo } from '../../../utils/helpers';
 
-//const mockHttp = {
-//  createAccount(fullName, email, password) {
-//    return Promise.resolve({
-//      data: {
-//        fullName: 'Test User',
-//        email: 'user01@test.com',
-//      },
-//    });
-//  },
-//};
-
 const signupActionCreator = {
   ...buildFormActionCreator(namespaces.SIGNUP),
 
@@ -66,7 +55,7 @@ const signupActionCreator = {
         dispatch(meActionCreator.setData(myUserInfo));
 
         //history.push('/events');
-        //redirectTo('/events');
+        redirectTo('/events');
       } catch (err) {
         dispatch(this.createAccountFailure(err.message));
       }

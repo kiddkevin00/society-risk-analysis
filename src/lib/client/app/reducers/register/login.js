@@ -2,7 +2,7 @@ import buildFormReducer from '../builders/form';
 import actionTypes, { namespaces } from '../../actionTypes/';
 import { combineReducers } from 'redux';
 
-const defaultErrorMsg = 'The username or password is incorrect.';
+const defaultErrorMsg = 'Something went wrong while logging in. Please try again.';
 const mainInitialState = {
   error: {
     isVisible: false,

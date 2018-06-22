@@ -19,9 +19,9 @@ class UnconnectedEvents extends Component {
   }
 
   render() {
-    if (this.props.isCheckingAuth) {
-      return null; // [TBD] Will have a loading indicator here.
-    } else if (this.props.isAuthenticated) {
+    //if (this.props.isCheckingAuth) {
+    //  return null; // [TBD] Will have a loading indicator here.
+    //} else if (this.props.isAuthenticated) {
       return (
         <section>
           <aside id="colorlib-hero">
@@ -221,8 +221,8 @@ class UnconnectedEvents extends Component {
           </div>
         </section>
       );
-    }
-    return null;
+    //}
+    //return null;
   }
 }
 
