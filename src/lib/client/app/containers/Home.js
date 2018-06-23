@@ -8,13 +8,13 @@ export default class Home extends Component {
         <aside id="colorlib-hero">
           <div className="flexslider">
             <ul className="slides">
-              <li style={{ backgroundImage: 'url(/images/img-bg-1_sra.jpg)' }}>
+              <li style={{ backgroundImage: 'url(/images/img-bg_sra-logo.png)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
                     <div className="col-md-8 col-sm-12 col-md-offset-2 slider-text">
                       <div className="slider-text-inner text-center">
-                        <h1>亞洲最大風險分析學會</h1>
+                        <h1 style={{ color: 'transparent' }}>亞洲最大風險分析學會</h1>
                         <p>
                           <a href="/register/signup" className="btn btn-primary btn-lg btn-learn">
                             加入會員
@@ -169,18 +169,14 @@ export default class Home extends Component {
                           aria-labelledby="headingOne"
                         >
                           <div className="panel-body">
-                            <div className="row">
-                              <div className="col-md-6">
-                                <p>
-                                  台灣風險分析學會深獲對風險分析領域有興趣的專家學者們響應及支持。而學會成立之目的為（1）促進台灣風險分析研究及教育的前進，（2）提供不同領域學者一個
-                                </p>
-                              </div>
-                              <div className="col-md-6">
-                                <p>
-                                  交換資訊、意見和方法以及解決關於風險議題的平台，（3）對於人類、環境風險分析與政府政策制定都將有所助益。
-                                </p>
-                              </div>
-                            </div>
+                            <p>
+                              台灣風險分析學會深獲對風險分析領域有興趣的專家學者們響應及支持，成立之目的為：
+                            </p>
+                            <ul>
+                              <li>促進台灣風險分析研究及教育的前進。</li>
+                              <li>提供不同領域學者一個交換資訊、意見和方法以及解決關於風險議題的平台。</li>
+                              <li>對於人類、環境風險分析與政府政策制定都將有所助益。</li>
+                            </ul>
                           </div>
                         </div>
                       </div>

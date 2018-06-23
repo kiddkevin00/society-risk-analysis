@@ -8,7 +8,7 @@ export default class Contact extends Component {
         <aside id="colorlib-hero">
           <div className="flexslider">
             <ul className="slides">
-              <li style={{ backgroundImage: 'url(images/img-bg_sra.jpg)' }}>
+              <li style={{ backgroundImage: 'url(/images/img-bg_sra.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
@@ -63,6 +63,7 @@ export default class Contact extends Component {
                           <a href="mailto:info@yoursite.com">{' '}2012tsra@gmail.com</a>
                         </p>
                       </div>
+                      {/*
                       <div className="con-info">
                         <p>
                           <span>
@@ -71,6 +72,7 @@ export default class Contact extends Component {
                           <a href="https://goo.gl/9eXS4d">{' '}https://goo.gl/9eXS4d</a>
                         </p>
                       </div>
+                      */}
                     </div>
                   </div>
                 </div>
