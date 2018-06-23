@@ -148,7 +148,7 @@ module.exports = {
       },
       {
         context: path.resolve(__dirname, './src/lib/client/static/assets/', 'sourcemaps/'),
-        from: '*.map',
+        from: '*', // change back to `'*.map',`
         to: path.resolve(__dirname, 'build/'),
       },
     ]),
