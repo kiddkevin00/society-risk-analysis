@@ -125,9 +125,11 @@ class UnconnectedLogin extends Component {
               </form>
 
               <br />
+              {/*
               <a href="/register/forgot-password" className="center-block text-center">
                 忘記密碼?
               </a>
+              */}
             </div>
           </div>
         </div>
