@@ -28,7 +28,7 @@ function init() {
   var addresses = ['China Medical University Library', 'Japan', 'San Jose', 'Brooklyn', 'india', 'Egypt'];
 
   for (var x = 0; x < addresses.length; x += 1) {
-    $.getJSON(`http://maps.googleapis.com/maps/api/geocode/json?address=${addresses[x]}`, null, function (data) {
+    $.getJSON(`https://maps.googleapis.com/maps/api/geocode/json?address=${addresses[x]}`, null, function (data) {
       if (data.status !== 'OK') {
         return;
       }

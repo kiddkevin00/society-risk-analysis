@@ -8,7 +8,7 @@ export default class Contact extends Component {
         <aside id="colorlib-hero">
           <div className="flexslider">
             <ul className="slides">
-              <li style={{ backgroundImage: 'url(images/img-bg-2.jpg)' }}>
+              <li style={{ backgroundImage: 'url(images/img-bg_sra.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">

@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6, figure {
       text-transform: uppercase; }
       .colorlib-nav ul li a {
         position: relative;
-        font-size: 12px;
+        font-size: 14px;
         padding: 30px 12px;
         font-weight: 700;
         color: rgba(0, 0, 0, 0.4);
@@ -242,6 +242,9 @@ h1, h2, h3, h4, h5, h6, figure {
       .colorlib-nav ul li.active > a {
         color: #892c1c !important;
         position: relative; }
+      .colorlib-nav ul.fadeInUpMenu li.active > a {
+        color: white !important;
+      }
         .colorlib-nav ul li.active > a:after {
           opacity: 1;
           -webkit-transform: translate3d(0, 0, 0);
