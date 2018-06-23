@@ -138,7 +138,7 @@ module.exports = {
       },
       {
         context: path.resolve(__dirname, './src/lib/client/static/assets/', 'js/'),
-        from: '*',
+        from: '*', // needs both ".map" and ".js"
         to: path.resolve(__dirname, './build/', 'js/'),
       },
       {
@@ -148,7 +148,7 @@ module.exports = {
       },
       {
         context: path.resolve(__dirname, './src/lib/client/static/assets/', 'sourcemaps/'),
-        from: '*', // change back to `'*.map',`
+        from: '*.map',
         to: path.resolve(__dirname, 'build/'),
       },
     ]),
