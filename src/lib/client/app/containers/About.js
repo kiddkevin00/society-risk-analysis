@@ -14,10 +14,10 @@ export default class About extends Component {
                   <div className="row">
                     <div className="col-md-6 col-sm-12 col-md-offset-3 slider-text">
                       <div className="slider-text-inner text-center">
-                        <h1>關於我們</h1>
+                        <h1>學會介紹</h1>
                         <h2>
                           <span>
-                            <a href="/home">首頁</a> | 關於我們
+                            <a href="/home">首頁</a> | 學會介紹
                           </span>
                         </h2>
                       </div>
