@@ -554,7 +554,7 @@ export default class Home extends Component {
             <div className="event-flex row-pb-sm">
               <div
                 className="half event-img animate-box"
-                style={{ backgroundImage: 'url(/images/event.jpg' }}
+                style={{ backgroundImage: 'url(/images/news-bg.jpg' }}
               />
               <div className="half">
                 <div className="row">

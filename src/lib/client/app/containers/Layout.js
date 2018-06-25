@@ -351,8 +351,8 @@ class UnconnectedLayout extends Component {
                       </a>
                     </li>
                     <li>
-                      <a href="https://sra-taiwan.firebaseapp.com/">
-                        <i className="icon-location4" /> sra-taiwan.firebaseapp.com
+                      <a href="http://srataiwan.com">
+                        <i className="icon-location4" /> https://srataiwan.com
                       </a>
                     </li>
                   </ul>
