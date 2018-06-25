@@ -92,7 +92,11 @@ class UnconnectedLayout extends Component {
                   <div className="col-md-4">
                     <div id="colorlib-logo">
                       <a href="/home">
-                        <img style={{ width: '36px', height: '36px' }} src="/images/logo.jpg" alt="" />
+                        <img
+                          style={{ width: '36px', height: '36px' }}
+                          src="/images/logo.jpg"
+                          alt=""
+                        />
                         &nbsp; 台灣風險分析學會
                       </a>
                     </div>
@@ -113,8 +117,12 @@ class UnconnectedLayout extends Component {
                           <li className={cx({ active: window.location.pathname === '/about' })}>
                             <a href="/about">關於本會</a>
                           </li>
-                          <li className={cx({ active: window.location.pathname === '/regulation' })}>
-                            <a href="https://sra-taiwan.firebaseapp.com/Regulation.html">學會章程</a>
+                          <li
+                            className={cx({ active: window.location.pathname === '/regulation' })}
+                          >
+                            <a href="https://sra-taiwan.firebaseapp.com/Regulation.html">
+                              學會章程
+                            </a>
                           </li>
                           <li className={cx({ active: window.location.pathname === '/cadres' })}>
                             <a href="https://sra-taiwan.firebaseapp.com/Cadres.html">歷屆幹部</a>
@@ -126,6 +134,9 @@ class UnconnectedLayout extends Component {
                       </li>
                       <li className={cx({ active: window.location.pathname === '/magazines' })}>
                         <a href="/magazines">學會會刊</a>
+                      </li>
+                      <li className={cx({ active: window.location.pathname === '/resources' })}>
+                        <a href="/resources">學會資源</a>
                       </li>
                       <li className={cx({ active: window.location.pathname === '/contact' })}>
                         <a href="/contact">聯絡我們</a>
@@ -273,11 +284,7 @@ class UnconnectedLayout extends Component {
                     />
                     <div className="desc">
                       <h2>
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://goo.gl/C6Dz6y"
-                        >
+                        <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/C6Dz6y">
                           基於風險的血液安全管理
                         </a>
                       </h2>
@@ -296,11 +303,7 @@ class UnconnectedLayout extends Component {
                     />
                     <div className="desc">
                       <h2>
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://goo.gl/hjmyqf"
-                        >
+                        <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/hjmyqf">
                           環境物聯網時代下之暴露評估
                         </a>
                       </h2>
@@ -319,11 +322,7 @@ class UnconnectedLayout extends Component {
                     />
                     <div className="desc">
                       <h2>
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://goo.gl/ng9VKy"
-                        >
+                        <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/ng9VKy">
                           歐洲雞蛋遭受芬普尼污染事件簡介
                         </a>
                       </h2>

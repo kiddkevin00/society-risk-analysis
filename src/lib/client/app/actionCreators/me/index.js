@@ -54,7 +54,8 @@ const meActionCreator = {
         dispatch(this.checkAuthenticationRequest());
 
         const { data: myUserInfoResponse } = await http.checkAuthentication();
-        const myUserInfo = StandardResponseWrapper.deserialize(myUserInfoResponse).getNthData(0).detail;
+        const myUserInfo = StandardResponseWrapper.deserialize(myUserInfoResponse).getNthData(0)
+          .detail;
 
         dispatch(this.checkAuthenticationSuccess());
         dispatch(this.setData(myUserInfo));

@@ -8,7 +8,7 @@ export default class Home extends Component {
         <aside id="colorlib-hero">
           <div className="flexslider">
             <ul className="slides">
-              <li style={{ backgroundImage: 'url(/images/img-bg_sra-logo.png)' }}>
+              <li style={{ backgroundImage: 'url(/images/img-bg_sra-logo.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
@@ -174,7 +174,9 @@ export default class Home extends Component {
                             </p>
                             <ul>
                               <li>促進台灣風險分析研究及教育的前進。</li>
-                              <li>提供不同領域學者一個交換資訊、意見和方法以及解決關於風險議題的平台。</li>
+                              <li>
+                                提供不同領域學者一個交換資訊、意見和方法以及解決關於風險議題的平台。
+                              </li>
                               <li>對於人類、環境風險分析與政府政策制定都將有所助益。</li>
                             </ul>
                           </div>
@@ -244,8 +246,10 @@ export default class Home extends Component {
                           <div className="panel-body">
                             <p>
                               未來，為了促使學界的研究成果能更為與實務需求結合，
-                              <strong>台灣風險分析學會（Taiwan Society for Risk Analysis, TSRA</strong>
-                              {' '}將擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合，
+                              <strong>
+                                台灣風險分析學會（Taiwan Society for Risk Analysis, TSRA
+                              </strong>{' '}
+                              將擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合，
                               並藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。
                             </p>
                           </div>
@@ -624,7 +628,10 @@ export default class Home extends Component {
                         </p>
                         <p className="organizer">
                           <span>
-                            <a target="_blank" href="https://sra-taiwan.firebaseapp.com/News.html?1">
+                            <a
+                              target="_blank"
+                              href="https://sra-taiwan.firebaseapp.com/News.html?1"
+                            >
                               點此查看投稿詳情
                             </a>
                           </span>

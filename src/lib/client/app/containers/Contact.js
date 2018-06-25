@@ -41,8 +41,8 @@ export default class Contact extends Component {
                         <p>
                           <span>
                             <i className="icon-location-2" />
-                          </span>
-                          {' '}40402 台中市北區學士路 91 號 立夫教學大樓 15 樓
+                          </span>{' '}
+                          40402 台中市北區學士路 91 號 立夫教學大樓 15 樓
                         </p>
                       </div>
                       <div className="con-info">
@@ -50,9 +50,7 @@ export default class Contact extends Component {
                           <span>
                             <i className="icon-phone3" />
                           </span>
-                          <a href="tel://0422053366#6117">
-                            {' '}04-2205-3366 #6117 何文照老師辦公室
-                          </a>
+                          <a href="tel://0422053366#6117"> 04-2205-3366 #6117 何文照老師辦公室</a>
                         </p>
                       </div>
                       <div className="con-info">
@@ -60,7 +58,7 @@ export default class Contact extends Component {
                           <span>
                             <i className="icon-paperplane" />
                           </span>
-                          <a href="mailto:info@yoursite.com">{' '}2012tsra@gmail.com</a>
+                          <a href="mailto:info@yoursite.com"> 2012tsra@gmail.com</a>
                         </p>
                       </div>
                       {/*

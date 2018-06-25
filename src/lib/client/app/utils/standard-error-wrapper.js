@@ -31,7 +31,6 @@
 const errorContext = 'error-context';
 
 class StandardErrorWrapper extends Error {
-
   constructor(initialErr) {
     super();
 
@@ -47,16 +46,20 @@ class StandardErrorWrapper extends Error {
       this[errorContext].errorStack = initialErr;
     } else if (initialErr) {
       // If the initial error doesn't follow standard error format, will attempt to standardized it.
-      const errMsg = initialErr.toString() !== '[object Object]' ?
-        initialErr.toString() : JSON.stringify(initialErr, null, 2);
+      const errMsg =
+        initialErr.toString() !== '[object Object]'
+          ? initialErr.toString()
+          : JSON.stringify(initialErr, null, 2);
 
-      this[errorContext].errorStack = [{
-        code: 1000,
-        name: 'UNKNOWN_ERROR',
-        source: 'society-risk-analysis',
-        message: errMsg,
-        detail: initialErr,
-      }];
+      this[errorContext].errorStack = [
+        {
+          code: 1000,
+          name: 'UNKNOWN_ERROR',
+          source: 'society-risk-analysis',
+          message: errMsg,
+          detail: initialErr,
+        },
+      ];
     } else {
       // If there is no initial error provided, default to an empty array.
       this[errorContext].errorStack = [];
@@ -90,7 +93,8 @@ class StandardErrorWrapper extends Error {
           code: 1002,
           name: 'ERROR_OBJ_PARSE_ERROR',
           source: 'society-risk-analysis',
-          message: 'The error object is not able to deserialize back to an instance of Standard Error Wrapper.',
+          message:
+            'The error object is not able to deserialize back to an instance of Standard Error Wrapper.',
         },
       ]);
 
@@ -107,7 +111,6 @@ class StandardErrorWrapper extends Error {
 
     return !!Array.isArray(errors);
   }
-
 }
 
 export { StandardErrorWrapper as default };

@@ -65,9 +65,7 @@ class UnconnectedLogin extends Component {
           <div className="col-sm-7 text">
             <h1>會員專屬待遇</h1>
             <div className="description">
-              <p>
-                最專業的團隊，最齊全的資料庫，讓你一手掌握世界動態！
-              </p>
+              <p>最專業的團隊，最齊全的資料庫，讓你一手掌握世界動態！</p>
             </div>
             <div className="top-big-link">
               <ol>

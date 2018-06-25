@@ -38,9 +38,7 @@ class UnconnectedNews extends Component {
             <span className="icon">
               <i className="icon-map" />
             </span>
-            <p>
-              {news['內容']}
-            </p>
+            <p>{news['內容']}</p>
           </div>
         </div>
       </div>
@@ -48,8 +46,7 @@ class UnconnectedNews extends Component {
   }
 
   render() {
-    const newsColumns = this.props.newses
-      .map((news) => this.renderNewsColumns(news));
+    const newsColumns = this.props.newses.map(news => this.renderNewsColumns(news));
 
     return (
       <section>
@@ -85,9 +82,7 @@ class UnconnectedNews extends Component {
                 <p>我們會即時更新最新消息，讓你輕鬆跟上學界動態。</p>
               </div>
             </div>
-            <div className="row">
-              {newsColumns}
-            </div>
+            <div className="row">{newsColumns}</div>
           </div>
         </div>
       </section>
@@ -96,11 +91,12 @@ class UnconnectedNews extends Component {
 }
 
 const mapStateToProps = state => ({
-  newses: (state.firebase.ordered && Array.isArray(state.firebase.ordered['最新消息'])) ?
-    state.firebase.ordered['最新消息'].map((news) => ({ key: news.key, ...news.value })) : [],
+  newses:
+    state.firebase.ordered && Array.isArray(state.firebase.ordered['最新消息'])
+      ? state.firebase.ordered['最新消息'].map(news => ({ key: news.key, ...news.value }))
+      : [],
 });
 
-export default compose(
-  firebaseConnect([{ path: '/最新消息' }]),
-  connect(mapStateToProps, null)
-)(UnconnectedNews);
+export default compose(firebaseConnect([{ path: '/最新消息' }]), connect(mapStateToProps, null))(
+  UnconnectedNews
+);

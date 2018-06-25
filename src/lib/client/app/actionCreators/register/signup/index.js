@@ -47,7 +47,8 @@ const signupActionCreator = {
         dispatch(this.createAccountRequest());
 
         const { data: myUserInfoResponse } = await http.createAccount(fullName, email, password);
-        const myUserInfo = StandardResponseWrapper.deserialize(myUserInfoResponse).getNthData(0).detail;
+        const myUserInfo = StandardResponseWrapper.deserialize(myUserInfoResponse).getNthData(0)
+          .detail;
 
         dispatch(this.createAccountSuccess());
 

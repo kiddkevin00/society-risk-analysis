@@ -47,7 +47,8 @@ const loginActionCreator = {
         dispatch(this.loginRequest());
 
         const { data: myUserInfoResponse } = await http.login(username, password);
-        const myUserInfo = StandardResponseWrapper.deserialize(myUserInfoResponse).getNthData(0).detail;
+        const myUserInfo = StandardResponseWrapper.deserialize(myUserInfoResponse).getNthData(0)
+          .detail;
 
         dispatch(this.loginSuccess());
 

@@ -32,7 +32,6 @@ import StandardErrorWrapper from './standard-error-wrapper';
 const responseContext = Symbol('response-context');
 
 class StandardResponseWrapper {
-
   constructor(initialData, name) {
     this[responseContext] = {};
 
@@ -79,7 +78,8 @@ class StandardResponseWrapper {
           code: 1001,
           name: 'RESPONSE_OBJ_PARSE_ERROR',
           source: 'society-risk-analysis',
-          message: 'The response object is not able to deserialize back to an instance of Standard Response Wrapper.',
+          message:
+            'The response object is not able to deserialize back to an instance of Standard Response Wrapper.',
         },
       ]);
 
@@ -87,7 +87,9 @@ class StandardResponseWrapper {
     }
 
     const data = successPayloadObj.result && successPayloadObj.result.data;
-    const name = successPayloadObj.result && successPayloadObj.result.meta &&
+    const name =
+      successPayloadObj.result &&
+      successPayloadObj.result.meta &&
       successPayloadObj.result.meta.name;
 
     return new StandardResponseWrapper(data, name);
@@ -98,7 +100,6 @@ class StandardResponseWrapper {
 
     return !!Array.isArray(data);
   }
-
 }
 
 export { StandardResponseWrapper as default };

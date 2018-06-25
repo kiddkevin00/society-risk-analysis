@@ -42,7 +42,12 @@ class UnconnectedSignup extends Component {
     // Prevents browser's default navigation (page refresh).
     event.preventDefault();
 
-    if (this.fullName.isValid() && this.email.isValid() && this.password.isValid() && this.confirmPassword.isValid()) {
+    if (
+      this.fullName.isValid() &&
+      this.email.isValid() &&
+      this.password.isValid() &&
+      this.confirmPassword.isValid()
+    ) {
       const fullName = this.props.formFullName.trim();
       const email = this.props.formEmail.trim() && this.props.formEmail.trim().toLowerCase();
       const password = this.props.formPassword.trim();
@@ -76,9 +81,7 @@ class UnconnectedSignup extends Component {
           <div className="col-sm-7 text">
             <h1>享有會員專屬待遇</h1>
             <div className="description">
-              <p>
-                全球最專業的團隊，最齊全的資料庫，讓你一手掌握世界動態！
-              </p>
+              <p>全球最專業的團隊，最齊全的資料庫，讓你一手掌握世界動態！</p>
             </div>
             <div className="top-big-link">
               <ol>
