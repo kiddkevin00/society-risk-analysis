@@ -147,7 +147,7 @@ class UnconnectedLayout extends Component {
           <div
             id="colorlib-subscribe"
             className="subs-img"
-            style={{ backgroundImage: 'url(/images/img-bg-6_sra.jpg' }}
+            style={{ backgroundImage: 'url(/images/img-bg-6_sra.jpg)' }}
             data-stellar-background-ratio="0.5"
           >
             <div className="overlay" />
@@ -269,7 +269,7 @@ class UnconnectedLayout extends Component {
                       rel="noopener noreferrer"
                       href="https://goo.gl/C6Dz6y"
                       className="blog-img"
-                      style={{ backgroundImage: 'url(/images/blog-1.jpg' }}
+                      style={{ backgroundImage: 'url(/images/2017-13-mag-cover.jpg)' }}
                     />
                     <div className="desc">
                       <h2>
@@ -292,7 +292,7 @@ class UnconnectedLayout extends Component {
                       rel="noopener noreferrer"
                       href="https://goo.gl/hjmyqf"
                       className="blog-img"
-                      style={{ backgroundImage: 'url(/images/blog-2.jpg' }}
+                      style={{ backgroundImage: 'url(/images/2017-12-mag-cover.jpg)' }}
                     />
                     <div className="desc">
                       <h2>
@@ -315,7 +315,7 @@ class UnconnectedLayout extends Component {
                       rel="noopener noreferrer"
                       href="https://goo.gl/ng9VKy"
                       className="blog-img"
-                      style={{ backgroundImage: 'url(/images/blog-3.jpg' }}
+                      style={{ backgroundImage: 'url(/images/2017-10-mag-cover.jpg)' }}
                     />
                     <div className="desc">
                       <h2>
