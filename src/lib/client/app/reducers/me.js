@@ -24,13 +24,15 @@ const mainReducer = (state = mainInitialState, action) => {
   const actionPayload = action.payload;
 
   switch (actionType) {
-    case ME.CHECK_AUTH.FAILURE:
+    case ME.RESET_STATE:
+      return { ...mainInitialState };
+    case ME.SET_DATA:
       return {
         ...state,
-        isCheckingAuth: false,
-        isAuthenticated: false,
-        hasCheckedAuth: true,
+        ...actionPayload,
       };
+    case ME.CHECK_AUTH.REQUEST:
+      return { ...state, isCheckingAuth: true };
     case ME.CHECK_AUTH.SUCCESS:
       return {
         ...state,
@@ -38,15 +40,13 @@ const mainReducer = (state = mainInitialState, action) => {
         isAuthenticated: true,
         hasCheckedAuth: true,
       };
-    case ME.CHECK_AUTH.REQUEST:
-      return { ...state, isCheckingAuth: true };
-    case ME.SET_DATA:
+    case ME.CHECK_AUTH.FAILURE:
       return {
         ...state,
-        ...actionPayload,
+        isCheckingAuth: false,
+        isAuthenticated: false,
+        hasCheckedAuth: true,
       };
-    case ME.RESET_STATE:
-      return { ...mainInitialState };
     default:
       return state;
   }

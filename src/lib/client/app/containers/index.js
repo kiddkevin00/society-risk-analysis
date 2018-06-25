@@ -2,7 +2,7 @@ export { default as Layout } from './Layout';
 export { default as Home } from './Home';
 export { default as About } from './About';
 export { default as News } from './News';
-export { default as Events } from './Events';
+export { default as Magazines } from './Magazines';
 export { default as Contact } from './Contact';
 
 export { default as Register } from './Register/';

@@ -54,8 +54,8 @@ const signupActionCreator = {
         dispatch(meActionCreator.checkAuthenticationSuccess());
         dispatch(meActionCreator.setData(myUserInfo));
 
-        //history.push('/events');
-        redirectTo('/events');
+        //history.push('/magazines');
+        redirectTo('/magazines');
       } catch (err) {
         dispatch(this.createAccountFailure(err.message));
       }

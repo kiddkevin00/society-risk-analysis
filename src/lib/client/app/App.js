@@ -1,4 +1,4 @@
-import { Layout, Home, About, News, Events, Contact, Register } from './containers/';
+import { Layout, Home, About, News, Magazines, Contact, Register } from './containers/';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import React from 'react';
@@ -12,7 +12,7 @@ const App = ({ store }) => (
           <Route exact={true} path="/home" component={Home} />
           <Route exact={true} path="/about" component={About} />
           <Route exact={true} path="/news" component={News} />
-          <Route exact={true} path="/events" component={Events} />
+          <Route exact={true} path="/magazines" component={Magazines} />
           <Route exact={true} path="/contact" component={Contact} />
 
           <Route path="/register" component={Register} />

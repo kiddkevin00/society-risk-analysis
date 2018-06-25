@@ -17,6 +17,8 @@ const meActionCreator = {
 
   resetState() {
     return dispatch => {
+      dispatch(this.resetFormState());
+
       dispatch(this.resetMainState());
     };
   },

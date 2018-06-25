@@ -17,7 +17,7 @@ const extractErrorListFromResponse = error =>
   error.response && StandardResponseWrapper.verifyFormat(error.response.data) &&
   StandardResponseWrapper.deserialize(error.response.data).getNthData(0) &&
   StandardErrorWrapper.verifyFormat(StandardResponseWrapper.deserialize(error.response.data).getNthData(0).detail) &&
-  StandardErrorWrapper.deserialize(StandardResponseWrapper.deserialize(error.response.data).getNthData(0).detail).getNthError(0) || error
+  StandardErrorWrapper.deserialize(StandardResponseWrapper.deserialize(error.response.data).getNthData(0).detail).getNthError(0) || error;
 const handleError = error =>
   throwErrorWithCodeAndMsg(getErrorCodeAndMsg(extractErrorListFromResponse(error)));
 

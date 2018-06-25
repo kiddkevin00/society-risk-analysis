@@ -1,7 +1,11 @@
 import rootReducer from '../reducers/';
+import firebaseClient from '../utils/firebaseClient';
+import { reactReduxFirebase } from 'react-redux-firebase';
 import { applyMiddleware, compose, createStore } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import loggerMiddleware from 'redux-logger';
+
+const config = { userProfile: 'users' };
 
 function configureStore(initialState) {
   const store = createStore(
@@ -9,6 +13,7 @@ function configureStore(initialState) {
     initialState,
     compose(
       applyMiddleware(thunkMiddleware),
+      reactReduxFirebase(firebaseClient, config),
       typeof process === 'object' && process.env.VERBOSE
         ? applyMiddleware(loggerMiddleware)
         : f => f,

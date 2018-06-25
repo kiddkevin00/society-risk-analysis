@@ -21,7 +21,6 @@ class UnconnectedLayout extends Component {
   }
 
   onChange(field, value) {
-    console.log(value)
     this.props.dispatchSetFormField(field, value);
   }
 
@@ -125,8 +124,8 @@ class UnconnectedLayout extends Component {
                       <li className={cx({ active: window.location.pathname === '/news' })}>
                         <a href="/news">最新消息</a>
                       </li>
-                      <li className={cx({ active: window.location.pathname === '/events' })}>
-                        <a href="/events">學會會刊</a>
+                      <li className={cx({ active: window.location.pathname === '/magazines' })}>
+                        <a href="/magazines">學會會刊</a>
                       </li>
                       <li className={cx({ active: window.location.pathname === '/contact' })}>
                         <a href="/contact">聯絡我們</a>
@@ -249,7 +248,7 @@ class UnconnectedLayout extends Component {
                         </a>
                       </li>
                       <li>
-                        <a href="/events">
+                        <a href="/magazines">
                           <i className="icon-check" /> 學會會刊
                         </a>
                       </li>
