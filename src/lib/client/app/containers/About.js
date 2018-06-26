@@ -98,7 +98,7 @@ export default class About extends Component {
                 <div className="trainers-entry">
                   <div
                     className="trainer-img"
-                    style={{ backgroundImage: 'url(/images/person-1.jpg' }}
+                    style={{ backgroundImage: 'url(/images/person-1.jpg)' }}
                   />
                   <div className="desc">
                     <h3>林文印</h3>
@@ -115,7 +115,7 @@ export default class About extends Component {
                 <div className="trainers-entry">
                   <div
                     className="trainer-img"
-                    style={{ backgroundImage: 'url(/images/person-2.jpg' }}
+                    style={{ backgroundImage: 'url(/images/person-2.jpg)' }}
                   />
                   <div className="desc">
                     <h3>陳重信</h3>
@@ -132,7 +132,7 @@ export default class About extends Component {
                 <div className="trainers-entry">
                   <div
                     className="trainer-img"
-                    style={{ backgroundImage: 'url(/images/person-3.jpg' }}
+                    style={{ backgroundImage: 'url(/images/person-3.jpg)' }}
                   />
                   <div className="desc">
                     <h3>詹長權</h3>
@@ -149,7 +149,7 @@ export default class About extends Component {
                 <div className="trainers-entry">
                   <div
                     className="trainer-img"
-                    style={{ backgroundImage: 'url(/images/person-4.jpg' }}
+                    style={{ backgroundImage: 'url(/images/person-4.jpg)' }}
                   />
                   <div className="desc">
                     <h3>許惠悰</h3>

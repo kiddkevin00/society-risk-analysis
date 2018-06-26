@@ -59,7 +59,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </li>
-              <li style={{ backgroundImage: 'url(/images/img-bg-4_sra.jpg' }}>
+              <li style={{ backgroundImage: 'url(/images/img-bg-4_sra.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
@@ -336,7 +336,7 @@ export default class Home extends Component {
         <div
           id="colorlib-counter"
           className="colorlib-counters"
-          style={{ backgroundImage: 'url(/images/img-bg-5_sra.jpg' }}
+          style={{ backgroundImage: 'url(/images/img-bg-5_sra.jpg)' }}
           data-stellar-background-ratio="0.5"
         >
           <div className="overlay" />
@@ -420,7 +420,7 @@ export default class Home extends Component {
         <div
           id="colorlib-testimony"
           className="testimony-img"
-          style={{ backgroundImage: 'url(/images/img-bg-2.jpg' }}
+          style={{ backgroundImage: 'url(/images/img-bg-2.jpg)' }}
           data-stellar-background-ratio="0.5"
         >
           <div className="overlay" />
@@ -448,7 +448,7 @@ export default class Home extends Component {
                           </blockquote>
                           <div
                             className="figure-img"
-                            style={{ backgroundImage: 'url(/images/person-1.jpg' }}
+                            style={{ backgroundImage: 'url(/images/person-1.jpg)' }}
                           />
                         </div>
                       </div>
@@ -465,7 +465,7 @@ export default class Home extends Component {
                           </blockquote>
                           <div
                             className="figure-img"
-                            style={{ backgroundImage: 'url(/images/person-2.jpg' }}
+                            style={{ backgroundImage: 'url(/images/person-2.jpg)' }}
                           />
                         </div>
                       </div>
@@ -483,7 +483,7 @@ export default class Home extends Component {
                           </blockquote>
                           <div
                             className="figure-img"
-                            style={{ backgroundImage: 'url(/images/person-3.jpg' }}
+                            style={{ backgroundImage: 'url(/images/person-3.jpg)' }}
                           />
                         </div>
                       </div>
@@ -571,7 +571,7 @@ export default class Home extends Component {
             <div className="event-flex row-pb-sm">
               <div
                 className="half event-img animate-box"
-                style={{ backgroundImage: 'url(/images/news-bg.jpg' }}
+                style={{ backgroundImage: 'url(/images/news-bg.jpg)' }}
               />
               <div className="half">
                 <div className="row">
@@ -584,7 +584,11 @@ export default class Home extends Component {
                         </p>
                         <p className="organizer">
                           <span>
-                            <a target="_blank" href="http://www.sra.org/2018-annual-meeting">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="http://www.sra.org/2018-annual-meeting"
+                            >
                               點此查看活動連結
                             </a>
                           </span>
@@ -612,7 +616,11 @@ export default class Home extends Component {
                         </p>
                         <p className="organizer">
                           <span>
-                            <a target="_blank" href="https://goo.gl/mrJBLj">
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://goo.gl/mrJBLj"
+                            >
                               點此查看詳細會議議程
                             </a>
                           </span>
@@ -643,7 +651,8 @@ export default class Home extends Component {
                           <span>
                             <a
                               target="_blank"
-                              href="https://sra-taiwan.firebaseapp.com/News.html?1"
+                              rel="noopener noreferrer"
+                              href="https://goo.gl/3V2tBn"
                             >
                               點此查看投稿詳情
                             </a>
