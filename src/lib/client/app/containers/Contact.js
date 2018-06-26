@@ -75,6 +75,7 @@ export default class Contact extends Component {
                   </div>
                 </div>
               </div>
+              {/*
               <div className="col-md-10 col-md-offset-1 animate-box">
                 <h2>留言版</h2>
                 <form>
@@ -136,6 +137,7 @@ export default class Contact extends Component {
                   </div>
                 </form>
               </div>
+              */}
             </div>
           </div>
         </div>

@@ -25,6 +25,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </li>
+              {/*
               <li style={{ backgroundImage: 'url(/images/img-bg-2_sra.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
@@ -76,6 +77,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </li>
+              */}
             </ul>
           </div>
         </aside>
@@ -276,6 +278,7 @@ export default class Home extends Component {
           </div>
         </div>
 
+        {/*
         <div id="colorlib-services">
           <div className="container">
             <div className="row">
@@ -332,7 +335,9 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+        */}
 
+        {/*
         <div
           id="colorlib-counter"
           className="colorlib-counters"
@@ -415,6 +420,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+        */}
 
         {/*
         <div
@@ -496,6 +502,7 @@ export default class Home extends Component {
         </div>
         */}
 
+        {/*
         <div className="colorlib-trainers">
           <div className="container">
             <div className="row">
@@ -559,7 +566,9 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+        */}
 
+        {/*
         <div className="colorlib-event">
           <div className="container">
             <div className="row">
@@ -678,7 +687,9 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+        */}
 
+        {/*
         <div className="colorlib-blog colorlib-light-grey">
           <div className="container">
             <div className="row">
@@ -784,6 +795,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+        */}
       </section>
     );
   }
