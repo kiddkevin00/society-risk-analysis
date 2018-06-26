@@ -670,44 +670,42 @@ export default class Home extends Component {
           </div>
         </div>
 
-        {/*
         <div className="colorlib-blog colorlib-light-grey">
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-                <h2>Recent Events</h2>
-                <p>
-                  Even the all-powerful Pointing has no control about the blind texts it is an
-                  almost unorthographic life One day however a small line of blind text by the name
-                </p>
+                <h2>學會會刊</h2>
+                <p>定期更新與整理相關學術會刊，讓你輕鬆跟上學界最新研究與發展。</p>
               </div>
             </div>
             <div className="row">
               <div className="col-md-6 animate-box">
                 <article className="article-entry">
                   <a
-                    href="blog.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://goo.gl/rHSKZc"
                     className="blog-img"
-                    style={{ backgroundImage: 'url(/images/blog-1.jpg' }}
+                    style={{ backgroundImage: 'url(/images/2017-13-mag-cover.jpg)' }}
                   >
                     <p className="meta">
-                      <span className="day">18</span>
-                      <span className="month">Apr</span>
+                      <span className="day">30</span>
+                      <span className="month">SEP</span>
                     </p>
                   </a>
                   <div className="desc">
+                    <p>2017 第13期</p>
                     <h2>
-                      <a href="blog.html">Creating Mobile Apps</a>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://goo.gl/rHSKZc"
+                      >
+                        基於風險的血液安全管理
+                      </a>
                     </h2>
                     <p className="admin">
-                      <span>Posted by:</span> <span>James Smith</span>
-                    </p>
-                    <p>
-                      Even the all-powerful Pointing has no control about the blind texts it is an
-                      almost unorthographic life. The Big Oxmox advised her not to do so, because
-                      there were thousands of bad Commas, wild Question Marks and devious Semikoli,
-                      but the Little Blind Text didn’t listen. She packed her seven versalia, put
-                      her initial into the belt and made herself on the way.
+                      <span>作者</span> <span>林希偉</span>
                     </p>
                   </div>
                 </article>
@@ -715,58 +713,61 @@ export default class Home extends Component {
               <div className="col-md-6">
                 <div className="f-blog animate-box">
                   <a
-                    href="blog.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://goo.gl/NWxHHf"
                     className="blog-img"
-                    style={{ backgroundImage: 'url(/images/blog-1.jpg' }}
+                    style={{ backgroundImage: 'url(/images/2017-12-mag-cover.jpg)' }}
                   />
                   <div className="desc">
+                    <p>2017 第12期</p>
                     <h2>
-                      <a href="blog.html">How to Create Website in Scratch</a>
+                      <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/NWxHHf">
+                        環境物聯網時代下之暴露評估
+                      </a>
                     </h2>
                     <p className="admin">
-                      <span>04 March 2018</span>
-                    </p>
-                    <p>
-                      Even the all-powerful Pointing has no control about the blind texts it is an
-                      almost unorthographic life
+                      <span>作者</span> <span>余化龍</span>
                     </p>
                   </div>
                 </div>
                 <div className="f-blog animate-box">
                   <a
-                    href="blog.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://goo.gl/1wKtD9"
                     className="blog-img"
-                    style={{ backgroundImage: 'url(/images/blog-2.jpg' }}
+                    style={{ backgroundImage: 'url(/images/2017-10-mag-cover.jpg)' }}
                   />
                   <div className="desc">
+                    <p>2017 第10期</p>
                     <h2>
-                      <a href="blog.html">How to Convert PSD File to HTML File?</a>
+                      <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/1wKtD9">
+                        歐洲雞蛋遭受芬普尼污染事件簡介
+                      </a>
                     </h2>
                     <p className="admin">
-                      <span>04 March 2018</span>
-                    </p>
-                    <p>
-                      Even the all-powerful Pointing has no control about the blind texts it is an
-                      almost unorthographic life
+                      <span>作者</span> <span>胡素婉</span>
                     </p>
                   </div>
                 </div>
                 <div className="f-blog animate-box">
                   <a
-                    href="blog.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://goo.gl/a4g3t2"
                     className="blog-img"
-                    style={{ backgroundImage: 'url(/images/blog-3.jpg' }}
+                    style={{ backgroundImage: 'url(/images/2017-8-mag-cover.jpg)' }}
                   />
                   <div className="desc">
+                    <p>2017 第8期</p>
                     <h2>
-                      <a href="blog.html">How to Build Games App in Mobile</a>
+                      <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/a4g3t2">
+                        韌性概念與都市防災之探討
+                      </a>
                     </h2>
                     <p className="admin">
-                      <span>04 March 2018</span>
-                    </p>
-                    <p>
-                      Even the all-powerful Pointing has no control about the blind texts it is an
-                      almost unorthographic life
+                      <span>作者</span> <span>黃泰霖</span>
                     </p>
                   </div>
                 </div>
@@ -774,7 +775,6 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        */}
       </section>
     );
   }
