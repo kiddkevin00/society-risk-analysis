@@ -85,6 +85,25 @@ export default class Home extends Component {
             <div className="row">
               <div className="col-md-4 intro-wrap">
                 <div className="intro-flex">
+                  <div className="one-third color-3 animate-box">
+                    <span className="icon">
+                      <i className="flaticon-book" />
+                    </span>
+                    <div className="desc">
+                      <h3>2019年 SRA World Congress on Risk</h3>
+                      <p>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="http://www.sra.org/2018-annual-meeting"
+                          className="view-more"
+                        >
+                          查看詳情
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
                   <div className="one-third color-1 animate-box">
                     <span className="icon">
                       <i className="flaticon-market" />
@@ -93,7 +112,9 @@ export default class Home extends Component {
                       <h3>2018台灣風險分析學會年會暨研討會當日資訊</h3>
                       <p>
                         <a
-                          href="https://sra-taiwan.firebaseapp.com/News.html?0"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://goo.gl/RCizDn"
                           className="view-more"
                         >
                           查看詳情
@@ -108,20 +129,12 @@ export default class Home extends Component {
                     <div className="desc">
                       <h3>2018台灣風險分析學會年會暨研討會論文摘要徵稿</h3>
                       <p>
-                        <a href="#" className="view-more">
-                          查看詳情
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="one-third color-3 animate-box">
-                    <span className="icon">
-                      <i className="flaticon-book" />
-                    </span>
-                    <div className="desc">
-                      <h3>2019年 SRA World Congress on Risk</h3>
-                      <p>
-                        <a href="#" className="view-more">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://goo.gl/3V2tBn"
+                          className="view-more"
+                        >
                           查看詳情
                         </a>
                       </p>

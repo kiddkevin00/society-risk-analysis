@@ -120,12 +120,10 @@ class UnconnectedLayout extends Component {
                           <li
                             className={cx({ active: window.location.pathname === '/regulation' })}
                           >
-                            <a href="https://sra-taiwan.firebaseapp.com/Regulation.html">
-                              學會章程
-                            </a>
+                            <a href="/regulation">學會章程</a>
                           </li>
                           <li className={cx({ active: window.location.pathname === '/cadres' })}>
-                            <a href="https://sra-taiwan.firebaseapp.com/Cadres.html">歷屆幹部</a>
+                            <a href="/cadres">歷屆幹部</a>
                           </li>
                         </ul>
                       </li>
@@ -244,12 +242,12 @@ class UnconnectedLayout extends Component {
                         </a>
                       </li>
                       <li>
-                        <a href="https://sra-taiwan.firebaseapp.com/Regulation.html">
+                        <a href="/regulation">
                           <i className="icon-check" /> 學會章程
                         </a>
                       </li>
                       <li>
-                        <a href="https://sra-taiwan.firebaseapp.com/Cadres.html">
+                        <a href="/cadres">
                           <i className="icon-check" /> 歷屆幹部
                         </a>
                       </li>
