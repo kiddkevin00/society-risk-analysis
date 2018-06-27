@@ -106,7 +106,7 @@ class UnconnectedNews extends Component {
 const mapStateToProps = state => ({
   newses:
     state.firebase.ordered && Array.isArray(state.firebase.ordered['最新消息'])
-      ? state.firebase.ordered['最新消息'].map(news => ({ key: news.key, ...news.value }))
+      ? state.firebase.ordered['最新消息'].map(news => ({ key: news.key, ...news.value })).reverse()
       : [],
 });
 

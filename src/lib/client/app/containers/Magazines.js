@@ -129,7 +129,7 @@ const mapStateToProps = state => ({
       ? state.firebase.ordered['學會會刊'].map(magazine => ({
           key: magazine.key,
           ...magazine.value,
-        }))
+        })).reverse()
       : [],
 });
 
