@@ -59,9 +59,22 @@ class UnconnectedMagazines extends Component {
     //if (this.props.isCheckingAuth || this.props.isFetchingData) {
     //  return null; // [TBD] Will have a loading indicator here.
     //} else if (this.props.isAuthenticated) {
-    const magazinesColumns = this.props.magazines.map(magazine =>
+    const magazineColumns = this.props.magazines.map(magazine =>
       this.renderMagazineColumns(magazine)
     );
+
+    const magazinesRows = [];
+    let rowColumns = [];
+
+    for (let index = 0; index < magazineColumns.length; index += 1) {
+      if (index % 3 === 0) {
+        rowColumns = [];
+        rowColumns.push(magazineColumns[index]);
+        magazinesRows.push(<div key={`mag-row-${(index / 3) + 1}`} className="row">{rowColumns}</div>);
+      } else {
+        rowColumns.push(magazineColumns[index]);
+      }
+    }
 
     return (
       <section>
@@ -97,7 +110,7 @@ class UnconnectedMagazines extends Component {
                 <p>定期更新與整理相關學術會刊，讓你輕鬆跟上學界最新研究與發展。</p>
               </div>
             </div>
-            <div className="row">{magazinesColumns}</div>
+            {magazinesRows}
           </div>
         </div>
       </section>

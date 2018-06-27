@@ -48,6 +48,19 @@ class UnconnectedNews extends Component {
   render() {
     const newsColumns = this.props.newses.map(news => this.renderNewsColumns(news));
 
+    const newsesRows = [];
+    let rowColumns = [];
+
+    for (let index = 0; index < newsColumns.length; index += 1) {
+      if (index % 3 === 0) {
+        rowColumns = [];
+        rowColumns.push(newsColumns[index]);
+        newsesRows.push(<div key={`news-row-${(index / 3) + 1}`} className="row">{rowColumns}</div>);
+      } else {
+        rowColumns.push(newsColumns[index]);
+      }
+    }
+
     return (
       <section>
         <aside id="colorlib-hero">
@@ -82,7 +95,7 @@ class UnconnectedNews extends Component {
                 <p>我們會即時更新最新消息，讓你輕鬆跟上學界動態。</p>
               </div>
             </div>
-            <div className="row">{newsColumns}</div>
+            {newsesRows}
           </div>
         </div>
       </section>
