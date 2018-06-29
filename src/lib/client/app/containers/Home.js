@@ -16,9 +16,11 @@ export default class Home extends Component {
                       <div className="slider-text-inner text-center">
                         <h1 style={{ color: 'transparent' }}>亞洲最大風險分析學會</h1>
                         <p>
+                          {/*
                           <a href="/register/signup" className="btn btn-primary btn-lg btn-learn">
                             加入會員
                           </a>
+                          */}
                         </p>
                       </div>
                     </div>
@@ -92,6 +94,7 @@ export default class Home extends Component {
                       <i className="flaticon-book" />
                     </span>
                     <div className="desc">
+                      <h3>最新消息</h3>
                       <h3>2019年 SRA World Congress on Risk</h3>
                       <p>
                         <a

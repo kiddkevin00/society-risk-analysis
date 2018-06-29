@@ -79,6 +79,7 @@ class UnconnectedSignup extends Component {
       <div className="container">
         <div className="row">
           <div className="col-sm-7 text">
+            {/*
             <h1>享有會員專屬待遇</h1>
             <div className="description">
               <p>全球最專業的團隊，最齊全的資料庫，讓你一手掌握世界動態！</p>
@@ -90,6 +91,7 @@ class UnconnectedSignup extends Component {
                 <li>學界最新消息盡在指尖</li>
               </ol>
             </div>
+            */}
           </div>
           <div className="col-lg-offset-1 col-lg-4 col-sm-5">
             <div className="form-top">

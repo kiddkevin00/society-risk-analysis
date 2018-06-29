@@ -80,7 +80,7 @@ class UnconnectedLayout extends Component {
                     </p>
                     */}
                     <p className="btn-apply">
-                      <a href="/register/signup">加入會員</a>
+                      <a href="/register/login">會員登入</a>
                     </p>
                   </div>
                 </div>
@@ -103,45 +103,45 @@ class UnconnectedLayout extends Component {
                   </div>
                   <div className="col-md-8 text-right menu-1">
                     <ul>
-                      <li className={cx({ active: window.location.pathname === '/home' })}>
-                        <a href="/home">首頁</a>
-                      </li>
                       <li
                         className={cx(
-                          { active: window.location.pathname === '/about' },
+                          { active: /\/about\/?/.test(window.location.pathname) },
                           'has-dropdown'
                         )}
                       >
                         <a href="/about">學會介紹</a>
                         <ul className="dropdown">
-                          <li className={cx({ active: window.location.pathname === '/about' })}>
+                          <li className={cx({ active: /\/about\/?/.test(window.location.pathname) })}>
                             <a href="/about">關於本會</a>
                           </li>
                           <li
-                            className={cx({ active: window.location.pathname === '/regulation' })}
+                            className={cx({ active: /\/regulation\/?/.test(window.location.pathname) })}
                           >
                             <a href="/regulation">學會章程</a>
                           </li>
-                          <li className={cx({ active: window.location.pathname === '/cadres' })}>
+                          <li className={cx({ active: /\/cadres\/?/.test(window.location.pathname) })}>
                             <a href="/cadres">歷屆幹部</a>
                           </li>
                         </ul>
                       </li>
-                      <li className={cx({ active: window.location.pathname === '/news' })}>
+                      <li className={cx({ active: /\/news\/?/.test(window.location.pathname) })}>
                         <a href="/news">最新消息</a>
                       </li>
-                      <li className={cx({ active: window.location.pathname === '/magazines' })}>
+                      <li className={cx({ active: /\/magazines\/?/.test(window.location.pathname) })}>
                         <a href="/magazines">學會會刊</a>
                       </li>
-                      <li className={cx({ active: window.location.pathname === '/resources' })}>
+                      <li className={cx({ active: /\/resources\/?/.test(window.location.pathname) })}>
                         <a href="/resources">學會資源</a>
                       </li>
-                      <li className={cx({ active: window.location.pathname === '/contact' })}>
+                      <li className={cx({ active: /\/contact\/?/.test(window.location.pathname) })}>
                         <a href="/contact">聯絡我們</a>
                       </li>
+                      <li className={cx({ active: /\/register\/login\/?/.test(window.location.pathname) })}>
+                        <a href="/register/login">會員登入</a>
+                      </li>
                       <li className="btn-cta">
-                        <a href="/register/login">
-                          <span>會員登入</span>
+                        <a href="/register/signup">
+                          <span>加入會員</span>
                         </a>
                       </li>
                     </ul>
