@@ -87,8 +87,10 @@ export default class Home extends Component {
         <div id="colorlib-intro">
           <div className="container">
             <div className="row">
+              {/*
               <div className="col-md-4 intro-wrap">
                 <div className="intro-flex">
+
                   <div className="one-third color-3 animate-box">
                     <span className="icon">
                       <i className="flaticon-book" />
@@ -108,7 +110,6 @@ export default class Home extends Component {
                       </p>
                     </div>
                   </div>
-
                   <div className="one-third color-1 animate-box">
                     <span className="icon">
                       <i className="flaticon-market" />
@@ -147,7 +148,8 @@ export default class Home extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-8">
+              */}
+              <div className="col-md-offset-1 col-md-10">
                 <div className="about-desc animate-box">
                   <h2>關於本會</h2>
                   <p>
