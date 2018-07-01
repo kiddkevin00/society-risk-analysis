@@ -9,8 +9,8 @@ import PropTypes from 'prop-types';
 class UnconnectedMagazines extends Component {
   static propTypes = {
     hasCheckedAuth: PropTypes.bool.isRequired,
-    isCheckingAuth: PropTypes.bool.isRequired,
-    isAuthenticated: PropTypes.bool.isRequired,
+    //isCheckingAuth: PropTypes.bool.isRequired,
+    //isAuthenticated: PropTypes.bool.isRequired,
     resources: PropTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
 
     dispatchCheckAuth: PropTypes.func.isRequired,
@@ -31,7 +31,7 @@ class UnconnectedMagazines extends Component {
   }
 
   render() {
-    //if (this.props.isCheckingAuth || this.props.isFetchingData) {
+    //if (this.props.isCheckingAuth) {
     //  return null; // [TBD] Will have a loading indicator here.
     //} else if (this.props.isAuthenticated) {
     const resourcesColumns = this.props.resources.map(magazine =>
@@ -84,14 +84,14 @@ class UnconnectedMagazines extends Component {
 
 const mapStateToProps = state => ({
   hasCheckedAuth: state.me.main.hasCheckedAuth,
-  isCheckingAuth: state.me.main.isCheckingAuth,
-  isAuthenticated: state.me.main.isAuthenticated,
+  //isCheckingAuth: state.me.main.isCheckingAuth,
+  //isAuthenticated: state.me.main.isAuthenticated,
   resources: [],
 });
 
 const mapDispatchToProps = dispatch => ({
   dispatchCheckAuth() {
-    return dispatch(meActionCreator.checkAuthentication());
+    return dispatch(meActionCreator.checkAuthentication(true));
   },
 });
 

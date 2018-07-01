@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import '../../static/assets/styles/containers/layout.scss';
+
 class UnconnectedLayout extends Component {
   static propTypes = {
     formEmail: PropTypes.string.isRequired,

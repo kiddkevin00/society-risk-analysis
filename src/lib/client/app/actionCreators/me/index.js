@@ -48,7 +48,7 @@ const meActionCreator = {
     };
   },
 
-  checkAuthentication() {
+  checkAuthentication(redirectOnNotPaid) {
     return async dispatch => {
       try {
         dispatch(this.checkAuthenticationRequest());
@@ -59,10 +59,16 @@ const meActionCreator = {
 
         dispatch(this.checkAuthenticationSuccess());
         dispatch(this.setData(myUserInfo));
+
+        if (redirectOnNotPaid && myUserInfo.type !== 'paid') {
+          redirectTo('/register/login');
+        }
       } catch (err) {
         dispatch(this.checkAuthenticationFailure());
 
-        redirectTo('/register/login');
+        if (redirectOnNotPaid) {
+          redirectTo('/register/login');
+        }
       }
     };
   },

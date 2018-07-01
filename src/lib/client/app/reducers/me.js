@@ -6,6 +6,7 @@ const { ME } = actionTypes;
 
 const mainInitialState = {
   _id: '',
+  type: undefined,
   fullName: '',
   email: '',
   hasCheckedAuth: false,

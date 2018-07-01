@@ -9,8 +9,8 @@ import PropTypes from 'prop-types';
 class UnconnectedMagazines extends Component {
   static propTypes = {
     hasCheckedAuth: PropTypes.bool.isRequired,
-    isCheckingAuth: PropTypes.bool.isRequired,
-    isAuthenticated: PropTypes.bool.isRequired,
+    //isCheckingAuth: PropTypes.bool.isRequired,
+    //isAuthenticated: PropTypes.bool.isRequired,
     magazines: PropTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
 
     dispatchCheckAuth: PropTypes.func.isRequired,
@@ -44,7 +44,7 @@ class UnconnectedMagazines extends Component {
           <div className="desc">
             <p>{`${magazine['期刊年份']} 第${magazine['期刊編號']}期`}</p>
             <h2>
-              <a href="blog.html">{magazine['主題']}</a>
+              <a target="_blank" href={magazine['期刊連結']}>{magazine['主題']}</a>
             </h2>
             <p className="admin">
               <span>作者</span> <span>{magazine['作者']}</span>
@@ -56,7 +56,7 @@ class UnconnectedMagazines extends Component {
   }
 
   render() {
-    //if (this.props.isCheckingAuth || this.props.isFetchingData) {
+    //if (this.props.isCheckingAuth) {
     //  return null; // [TBD] Will have a loading indicator here.
     //} else if (this.props.isAuthenticated) {
     const magazineColumns = this.props.magazines.map(magazine =>
@@ -122,14 +122,23 @@ class UnconnectedMagazines extends Component {
 
 const mapStateToProps = state => ({
   hasCheckedAuth: state.me.main.hasCheckedAuth,
-  isCheckingAuth: state.me.main.isCheckingAuth,
-  isAuthenticated: state.me.main.isAuthenticated,
+  //isCheckingAuth: state.me.main.isCheckingAuth,
+  //isAuthenticated: state.me.main.isAuthenticated,
+  type: state.me.main.type,
   magazines:
     state.firebase.ordered && Array.isArray(state.firebase.ordered['學會會刊'])
-      ? state.firebase.ordered['學會會刊'].map(magazine => ({
-          key: magazine.key,
-          ...magazine.value,
-        })).reverse()
+      ? state.firebase.ordered['學會會刊']
+          .filter(magazine => {
+            if (state.me.main.type !== 'paid') {
+              return magazine.value['期刊年份'] === 2018;
+            }
+            return true;
+          })
+          .map(magazine => ({
+            key: magazine.key,
+            ...magazine.value,
+          }))
+          .reverse()
       : [],
 });
 
