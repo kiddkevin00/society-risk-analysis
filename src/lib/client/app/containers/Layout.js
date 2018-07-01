@@ -55,32 +55,6 @@ class UnconnectedLayout extends Component {
                     <p>Welcome to Taiwan Society for Risk Analysis</p>
                   </div>
                   <div className="col-xs-4 col-xs-push-2 text-right">
-                    {/*
-                    <p>
-                      <ul className="colorlib-social-icons">
-                        <li>
-                          <a href="#">
-                            <i className="icon-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-facebook" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-linkedin" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="icon-dribbble" />
-                          </a>
-                        </li>
-                      </ul>
-                    </p>
-                    */}
                     <p className="btn-apply">
                       <a href="/register/login">會員登入</a>
                     </p>
@@ -95,7 +69,7 @@ class UnconnectedLayout extends Component {
                     <div id="colorlib-logo">
                       <a href="/home">
                         <img
-                          style={{ width: '36px', height: '36px' }}
+                          style={{ width: '48px', height: '48px' }}
                           src="/images/logo.jpg"
                           alt=""
                         />
