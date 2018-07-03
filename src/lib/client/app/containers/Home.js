@@ -267,7 +267,7 @@ export default class Home extends Component {
                             <p>
                               未來，為了促使學界的研究成果能更為與實務需求結合，
                               <strong>
-                                台灣風險分析學會 (Taiwan Society for Risk Analysis, TSRA
+                                台灣風險分析學會 (Taiwan Society for Risk Analysis, TSRA)
                               </strong>{' '}
                               將擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合，並藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。
                             </p>

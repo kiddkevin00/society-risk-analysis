@@ -51,16 +51,16 @@ export default class About extends Component {
                     <h2>台灣風險分析學會</h2>
                   </div>
                   <p>
-                    台灣風險分析學會（Taiwan Society for Risk Analysis,
-                    TSRA）係由陳重信博士創始，為美國風險分析總會（Society for Risk Analysis or
-                    SRA）合法的區域組織，美國風險分析總會成立於1980年，為一個國際性的學術組織，目的為推動風險分析的發展，並提供從事風險分析工作與研究的專業人事學術交流與經驗分享的場所，並發行具有高度影響指數（Impact
-                    Factor）的學術期刊。
+                    台灣風險分析學會 (Taiwan Society for Risk Analysis,
+                    TSRA) 係由陳重信博士創始，為美國風險分析總會 (Society for Risk Analysis or
+                    SRA) 合法的區域組織，美國風險分析總會成立於1980年，為一個國際性的學術組織，目的為推動風險分析的發展，並提供從事風險分析工作與研究的專業人事學術交流與經驗分享的場所，並發行具有高度影響指數 (Impact
+                    Factor) 的學術期刊。
                   </p>
                   <p>
                     陳博士為了推動台灣風險分析的發展、相關學術研究及技術開發，向美國總會申請成立台灣分會，並由總會執行委員會決議通過，於
                     2006 年 6 月 30 日正式成立台灣的風險分析學會分會，是為 Taiwan Society for Risk
                     Analysis
-                    （TSRA），透過學會與國際間各國進行交流，以強化台灣於國際風險分析之能量。
+                     (TSRA)，透過學會與國際間各國進行交流，以強化台灣於國際風險分析之能量。
                   </p>
                 </div>
               </div>
