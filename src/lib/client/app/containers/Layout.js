@@ -69,7 +69,6 @@ class UnconnectedLayout extends Component {
                     <div id="colorlib-logo">
                       <a href="/home">
                         <img
-                          style={{ width: '45px', height: '45px' }}
                           src="/images/logo.jpg"
                           alt=""
                         />
