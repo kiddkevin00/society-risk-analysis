@@ -48,7 +48,7 @@ export default class About extends Component {
               <div className="col-md-10 col-md-offset-1 text-center animate-box">
                 <div className="about-wrap">
                   <div className="heading-2">
-                    <h2>亞洲最大風險分析學會</h2>
+                    <h2>台灣風險分析學會</h2>
                   </div>
                   <p>
                     台灣風險分析學會（Taiwan Society for Risk Analysis,

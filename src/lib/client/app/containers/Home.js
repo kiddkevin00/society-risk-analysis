@@ -153,13 +153,13 @@ export default class Home extends Component {
                 <div className="about-desc animate-box">
                   <h2>關於本會</h2>
                   <p>
-                    台灣風險分析學會（Taiwan Society for Risk Analysis,
-                    TSRA）係由陳重信博士創始，為美國風險分析總會（Society for Risk Analysis or
-                    SRA）合法的區域組織，美國風險分析總會成立於1980年，為一個國際性的學術組織，目的為推動風險分析的發展，並提供從事風險分析工作與研究的專業人事學術交流與經驗分享的場所，並發行具有高度影響指數（Impact
-                    Factor）的學術期刊。陳博士為了推動台灣風險分析的發展、相關學術研究及技術開發，向美國總會申請成立台灣分會，並由總會執行委員會決議通過，於
+                    台灣風險分析學會 (Taiwan Society for Risk Analysis, TSRA)
+                    係由陳重信博士創始，為美國風險分析總會 (Society for Risk Analysis or SRA)
+                    合法的區域組織，美國風險分析總會成立於1980年，為一個國際性的學術組織，目的為推動風險分析的發展，並提供從事風險分析工作與研究的專業人事學術交流與經驗分享的場所，並發行具有高度影響指數
+                    (ImpactFactor)
+                    的學術期刊。陳博士為了推動台灣風險分析的發展、相關學術研究及技術開發，向美國總會申請成立台灣分會，並由總會執行委員會決議通過，於
                     2006 年 6 月 30 日正式成立台灣的風險分析學會分會，是為 Taiwan Society for Risk
-                    Analysis
-                    （TSRA），透過學會與國際間各國進行交流，以強化台灣於國際風險分析之能量。
+                    Analysis (TSRA)，透過學會與國際間各國進行交流，以強化台灣於國際風險分析之能量。
                   </p>
                   <div className="fancy-collapse-panel">
                     <div
@@ -225,14 +225,14 @@ export default class Home extends Component {
                         >
                           <div className="panel-body">
                             <p>
-                              風險分析由風險評估、風險管理和風險溝通三位一體緊密結合建構而成，為當代面對高度不確定性的環境與社會下，不可或缺之重要課題，
-                              也因此台灣風險分析學會唯一跨領域之學會，關注面向相當多元，包括：健康風險（health
-                              risk）、環境風險（environmental risk）、災害風險（disaster risk）、
-                              職業安全衛生（occupational
-                              health）等，並透過科學之分析方法與策略，例如暴露評估（exposure
-                              assessment）、毒理學（toxicology）、決策分析（decision
-                              analysis）、資料科學（data Science）與風險治理（Risk
-                              Governance）等，探討當代這種重要的風險議題，如食品安全、永續環境、韌性社會建構與新興風險等。
+                              風險分析由風險評估、風險管理和風險溝通三位一體緊密結合建構而成，為當代面對高度不確定性的環境與社會下，不可或缺之重要課題，也因此台灣風險分析學會唯一跨領域之學會，關注面向相當多元，包括：健康風險
+                              (health risk)、環境風險 (environmental risk)、災害風險 (disaster
+                              risk)、職業安全衛生 (occupational health)
+                              等，並透過科學之分析方法與策略，例如暴露評估 (exposure
+                              assessment)、毒理學 (toxicology)、決策分析
+                              (decisionanalysis)、資料科學 (data Science) 與風險治理
+                              (RiskGovernance)
+                              等，探討當代這種重要的風險議題，如食品安全、永續環境、韌性社會建構與新興風險等。
                             </p>
                             <ul>
                               <li>
@@ -267,10 +267,9 @@ export default class Home extends Component {
                             <p>
                               未來，為了促使學界的研究成果能更為與實務需求結合，
                               <strong>
-                                台灣風險分析學會（Taiwan Society for Risk Analysis, TSRA
+                                台灣風險分析學會 (Taiwan Society for Risk Analysis, TSRA
                               </strong>{' '}
-                              將擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合，
-                              並藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。
+                              將擔任一個促進學界與產業界交流的平台，促成理論與實務、模擬與實際成效更加密合，並藉由教育訓練推廣，推動風險分析相關認證制度，致力於將風險分析更加專業化、在地化。
                             </p>
                           </div>
                         </div>

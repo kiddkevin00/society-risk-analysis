@@ -55,7 +55,11 @@ class UnconnectedNews extends Component {
       if (index % 3 === 0) {
         rowColumns = [];
         rowColumns.push(newsColumns[index]);
-        newsesRows.push(<div key={`news-row-${(index / 3) + 1}`} className="row">{rowColumns}</div>);
+        newsesRows.push(
+          <div key={`news-row-${index / 3 + 1}`} className="row">
+            {rowColumns}
+          </div>
+        );
       } else {
         rowColumns.push(newsColumns[index]);
       }

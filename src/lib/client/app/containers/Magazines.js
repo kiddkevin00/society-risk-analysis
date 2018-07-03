@@ -44,7 +44,9 @@ class UnconnectedMagazines extends Component {
           <div className="desc">
             <p>{`${magazine['期刊年份']} 第${magazine['期刊編號']}期`}</p>
             <h2>
-              <a target="_blank" href={magazine['期刊連結']}>{magazine['主題']}</a>
+              <a target="_blank" href={magazine['期刊連結']}>
+                {magazine['主題']}
+              </a>
             </h2>
             <p className="admin">
               <span>作者</span> <span>{magazine['作者']}</span>
@@ -70,7 +72,11 @@ class UnconnectedMagazines extends Component {
       if (index % 3 === 0) {
         rowColumns = [];
         rowColumns.push(magazineColumns[index]);
-        magazinesRows.push(<div key={`mag-row-${(index / 3) + 1}`} className="row">{rowColumns}</div>);
+        magazinesRows.push(
+          <div key={`mag-row-${index / 3 + 1}`} className="row">
+            {rowColumns}
+          </div>
+        );
       } else {
         rowColumns.push(magazineColumns[index]);
       }

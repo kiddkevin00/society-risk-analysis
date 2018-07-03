@@ -69,7 +69,7 @@ class UnconnectedLayout extends Component {
                     <div id="colorlib-logo">
                       <a href="/home">
                         <img
-                          style={{ width: '48px', height: '48px' }}
+                          style={{ width: '45px', height: '45px' }}
                           src="/images/logo.jpg"
                           alt=""
                         />
@@ -87,15 +87,21 @@ class UnconnectedLayout extends Component {
                       >
                         <a href="/about">學會介紹</a>
                         <ul className="dropdown">
-                          <li className={cx({ active: /\/about\/?/.test(window.location.pathname) })}>
+                          <li
+                            className={cx({ active: /\/about\/?/.test(window.location.pathname) })}
+                          >
                             <a href="/about">關於本會</a>
                           </li>
                           <li
-                            className={cx({ active: /\/regulation\/?/.test(window.location.pathname) })}
+                            className={cx({
+                              active: /\/regulation\/?/.test(window.location.pathname),
+                            })}
                           >
                             <a href="/regulation">學會章程</a>
                           </li>
-                          <li className={cx({ active: /\/cadres\/?/.test(window.location.pathname) })}>
+                          <li
+                            className={cx({ active: /\/cadres\/?/.test(window.location.pathname) })}
+                          >
                             <a href="/cadres">歷屆幹部</a>
                           </li>
                         </ul>
@@ -103,16 +109,24 @@ class UnconnectedLayout extends Component {
                       <li className={cx({ active: /\/news\/?/.test(window.location.pathname) })}>
                         <a href="/news">最新消息</a>
                       </li>
-                      <li className={cx({ active: /\/magazines\/?/.test(window.location.pathname) })}>
+                      <li
+                        className={cx({ active: /\/magazines\/?/.test(window.location.pathname) })}
+                      >
                         <a href="/magazines">學會會刊</a>
                       </li>
-                      <li className={cx({ active: /\/resources\/?/.test(window.location.pathname) })}>
+                      <li
+                        className={cx({ active: /\/resources\/?/.test(window.location.pathname) })}
+                      >
                         <a href="/resources">學會資源</a>
                       </li>
                       <li className={cx({ active: /\/contact\/?/.test(window.location.pathname) })}>
                         <a href="/contact">聯絡我們</a>
                       </li>
-                      <li className={cx({ active: /\/register\/login\/?/.test(window.location.pathname) })}>
+                      <li
+                        className={cx({
+                          active: /\/register\/login\/?/.test(window.location.pathname),
+                        })}
+                      >
                         <a href="/register/login">會員登入</a>
                       </li>
                       <li className="btn-cta">
