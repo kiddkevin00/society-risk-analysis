@@ -16,18 +16,15 @@ export default class Home extends Component {
                       <div className="slider-text-inner text-center">
                         <h1 style={{ color: 'transparent' }}>亞洲最大風險分析學會</h1>
                         <p>
-                          {/*
                           <a href="/register/signup" className="btn btn-primary btn-lg btn-learn">
                             加入會員
                           </a>
-                          */}
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-              {/*
               <li style={{ backgroundImage: 'url(/images/img-bg-2_sra.jpg)' }}>
                 <div className="overlay" />
                 <div className="container-fluid">
@@ -79,7 +76,6 @@ export default class Home extends Component {
                   </div>
                 </div>
               </li>
-              */}
             </ul>
           </div>
         </aside>
@@ -87,7 +83,6 @@ export default class Home extends Component {
         <div id="colorlib-intro">
           <div className="container">
             <div className="row">
-              {/*
               <div className="col-md-4 intro-wrap">
                 <div className="intro-flex">
 
@@ -148,7 +143,6 @@ export default class Home extends Component {
                   </div>
                 </div>
               </div>
-              */}
               <div className="col-md-offset-1 col-md-10">
                 <div className="about-desc animate-box">
                   <h2>關於本會</h2>
@@ -282,7 +276,6 @@ export default class Home extends Component {
           </div>
         </div>
 
-        {/*
         <div id="colorlib-services">
           <div className="container">
             <div className="row">
@@ -339,9 +332,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        */}
 
-        {/*
         <div
           id="colorlib-counter"
           className="colorlib-counters"
@@ -424,7 +415,6 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        */}
 
         {/*
         <div
@@ -506,7 +496,6 @@ export default class Home extends Component {
         </div>
         */}
 
-        {/*
         <div className="colorlib-trainers">
           <div className="container">
             <div className="row">
@@ -570,9 +559,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        */}
 
-        {/*
         <div className="colorlib-event">
           <div className="container">
             <div className="row">
@@ -691,9 +678,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        */}
 
-        {/*
         <div className="colorlib-blog colorlib-light-grey">
           <div className="container">
             <div className="row">
@@ -799,7 +784,6 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        */}
       </section>
     );
   }
