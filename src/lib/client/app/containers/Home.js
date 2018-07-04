@@ -14,7 +14,7 @@ export default class Home extends Component {
                   <div className="row">
                     <div className="col-md-8 col-sm-12 col-md-offset-2 slider-text">
                       <div className="slider-text-inner text-center">
-                        <h1 style={{ color: 'transparent' }}>亞洲最大風險分析學會</h1>
+                        <h1>亞洲最大風險分析學會</h1>
                         <p>
                           <a href="/register/signup" className="btn btn-primary btn-lg btn-learn">
                             加入會員
@@ -85,8 +85,7 @@ export default class Home extends Component {
             <div className="row">
               <div className="col-md-4 intro-wrap">
                 <div className="intro-flex">
-
-                  <div className="one-third color-3 animate-box">
+                  <div className="one-third color-1 animate-box">
                     <span className="icon">
                       <i className="flaticon-book" />
                     </span>
@@ -105,7 +104,7 @@ export default class Home extends Component {
                       </p>
                     </div>
                   </div>
-                  <div className="one-third color-1 animate-box">
+                  <div className="one-third color-2 animate-box">
                     <span className="icon">
                       <i className="flaticon-market" />
                     </span>
@@ -123,7 +122,7 @@ export default class Home extends Component {
                       </p>
                     </div>
                   </div>
-                  <div className="one-third color-2 animate-box">
+                  <div className="one-third color-3 animate-box">
                     <span className="icon">
                       <i className="flaticon-open-book" />
                     </span>
@@ -143,7 +142,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-offset-1 col-md-10">
+              <div className="col-md-8">
                 <div className="about-desc animate-box">
                   <h2>關於本會</h2>
                   <p>
