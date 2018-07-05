@@ -1,7 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Philosopher');
-
 .colorlib-nav {
   * {
-    font-family: 'Philosopher';
+    font-family: 'Noto Sans TC', serif, Times;
+  }
+
+  #colorlib-logo a {
+    font-family: 'cwtexfangsong', serif, Times;
+    font-weight: 500;
+  }
+
+  .top-menu ul li a {
+    font-weight: 400;
   }
 }
+
+
