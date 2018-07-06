@@ -85,7 +85,7 @@ class UnconnectedLayout extends Component {
                         )}
                       >
                         <a href="/about">學會介紹</a>
-                        <ul className="dropdown">
+                        <ul className="dropdown" style={{ display: 'block ' }}>
                           <li
                             className={cx({ active: /\/about\/?/.test(window.location.pathname) })}
                           >
