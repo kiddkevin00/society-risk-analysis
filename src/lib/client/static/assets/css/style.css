@@ -1,11 +1,9 @@
-/*
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
-*/
 
 /* =======================================================
 *
@@ -13,7 +11,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "cwtexfangsong", "Open Sans", serif, Times;
+  font-family: "cwtexfangsong", "Open Sans", serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
@@ -59,7 +57,7 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
-  font-family: "cwTeXFangSong", serif, Times;
+  font-family: "cwTeXFangSong", "Playfair Display", Georgia, serif;
   font-weight: 500 !important;
   margin: 0 0 20px 0;
   line-height: 1.5; }
@@ -464,7 +462,7 @@ h1, h2, h3, h4, h5, h6, figure {
     .intro-flex .one-third h3 {
       font-weight: 400;
       color: #892c1c;
-      font-family: "cwtexfangsong", "Open Sans", serif, Times;
+      font-family: "cwtexfangsong", "Open Sans", serif;
       margin-bottom: 10px; }
     .intro-flex .one-third p {
       margin: 0; }
@@ -501,7 +499,7 @@ h1, h2, h3, h4, h5, h6, figure {
   box-shadow: none !important; }
 
 .panel-title {
-  font-family: "cwtexfangsong", "Open Sans", serif, Times;
+  font-family: "cwtexfangsong", "Open Sans", serif;
   font-weight: 400; }
 
 .panel {
@@ -513,7 +511,7 @@ h1, h2, h3, h4, h5, h6, figure {
   border: none; }
 
 .panel-heading a:after {
-  font-family: "cwtexfangsong", Times;
+  font-family: "icomoon";
   content: "\e0c5";
   position: absolute;
   right: 20px;
@@ -644,7 +642,7 @@ h1, h2, h3, h4, h5, h6, figure {
     font-size: 40px;
     display: block;
     color: #429FFD;
-    font-family: "cwtexfangsong", "Open Sans", serif, Times;
+    font-family: "cwtexfangsong", "Open Sans", serif;
     width: 100%;
     font-weight: 700;
     margin-bottom: 0; }
@@ -906,7 +904,7 @@ h1, h2, h3, h4, h5, h6, figure {
       #colorlib-testimony .testimony-slide blockquote p {
         font-size: 20px;
         font-weight: 400;
-        font-family: "cwtexfangsong", "Playfair Display", Georgia, serif, Times; }
+        font-family: "cwtexfangsong", "Playfair Display", Georgia, serif; }
   #colorlib-testimony .testimony-wrap {
     padding: 0 3em;
     width: 100%;
@@ -1391,7 +1389,7 @@ input[type="text"] {
         #colorlib-offcanvas ul li.offcanvas-has-dropdown > a:after {
           position: absolute;
           right: 0px;
-          font-family: "cwtexfangsong", serif, Times;
+          font-family: "icomoon";
           speak: none;
           font-style: normal;
           font-weight: normal;
