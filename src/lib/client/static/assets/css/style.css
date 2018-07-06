@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6, figure {
       .colorlib-nav .upper-menu .btn-apply a {
         color: rgba(255, 255, 255, 0.8); }
   .colorlib-nav .top-menu {
-    background: #f5f5f5 url("../images/paper-bg.jpg") fixed;
+    background: white;
     padding: 30px 30px;
     height: 97px; }
     @media screen and (max-width: 768px) {
@@ -312,8 +312,8 @@ h1, h2, h3, h4, h5, h6, figure {
     transform: scale(1.1); }
 
 #colorlib-hero {
-  min-height: 600px;
-  background: #fff url(../images/loader.gif) no-repeat center center;
+  min-height: 400px;
+  background: rgba(0,0,0,0) url(../images/loader.gif) no-repeat center center;
   width: 100%;
   float: left; }
   #colorlib-hero .btn {
@@ -323,7 +323,8 @@ h1, h2, h3, h4, h5, h6, figure {
   #colorlib-hero .flexslider {
     border: none;
     z-index: 1;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,0) }
     #colorlib-hero .flexslider .slides {
       position: relative;
       overflow: hidden; }
@@ -331,7 +332,7 @@ h1, h2, h3, h4, h5, h6, figure {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        min-height: 600px;
+        min-height: 400px;
         position: relative; }
         #colorlib-hero .flexslider .slides li .overlay {
           position: absolute;
@@ -360,12 +361,12 @@ h1, h2, h3, h4, h5, h6, figure {
       max-width: 100%;
       display: table;
       opacity: 0;
-      height: 600px;
+      height: 450px;
       z-index: 9; }
       #colorlib-hero .flexslider .slider-text > .slider-text-inner {
         display: table-cell;
         vertical-align: middle;
-        height: 600px;
+        height: 450px;
         padding: 2em; }
         @media screen and (max-width: 768px) {
           #colorlib-hero .flexslider .slider-text > .slider-text-inner {
@@ -376,24 +377,25 @@ h1, h2, h3, h4, h5, h6, figure {
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h1, #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
           margin: 0;
           padding: 0;
-          color: white; }
+          color: #333; }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
           margin-bottom: 30px;
-          font-size: 50px;
+          font-size: 75px;
           font-weight: 800;
           opacity: 1; }
           @media screen and (max-width: 768px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
-              font-size: 28px; } }
+              font-size: 70px; } }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
-          font-size: 18px;
+          font-size: 30px;
           line-height: 1.5;
-          margin-bottom: 20px;
+          margin-top: 170px;
+          margin-bottom: 0px;
           font-weight: 300;
-          color: rgba(255, 255, 255, 0.7);
+          color: #6B5E58;
           text-transform: uppercase; }
           #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 a {
-            color: rgba(255, 255, 255, 0.8); }
+            color: #6B5E58; }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
           font-size: 12px;
           text-transform: uppercase;
@@ -422,7 +424,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .colorlib-blog,
 #colorlib-project,
 #colorlib-subscribe {
-  padding: 7em 0;
+  padding: 3em 0;
   clear: both; }
 
 #colorlib-intro {

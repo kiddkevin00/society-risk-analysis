@@ -68,10 +68,7 @@ class UnconnectedLayout extends Component {
                   <div className="col-md-4">
                     <div id="colorlib-logo">
                       <a href="/home">
-                        <img
-                          src="/images/logo.jpg"
-                          alt=""
-                        />
+                        <img src="/images/logo.jpg" alt="" />
                         &nbsp; 台灣風險分析學會
                       </a>
                     </div>

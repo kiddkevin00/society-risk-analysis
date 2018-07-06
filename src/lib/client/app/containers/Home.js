@@ -13,7 +13,7 @@ export default class Home extends Component {
                 <div className="container-fluid">
                   <div className="row">
                     <div className="col-md-8 col-sm-12 col-md-offset-2 slider-text">
-                      <div className="slider-text-inner text-center">
+                      <div className="slider-text-inner text-center" style={{ height: '600px' }}>
                         <h1 style={{ color: 'transparent' }}>亞洲最大風險分析學會</h1>
                         <p>
                           {/*
