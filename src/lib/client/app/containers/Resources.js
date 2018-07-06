@@ -43,18 +43,15 @@ class UnconnectedMagazines extends Component {
         <aside id="colorlib-hero">
           <div className="flexslider">
             <ul className="slides">
-              <li style={{ backgroundImage: 'url(/images/img-bg-headline.svg)' }}>
-                <div className="overlay" />
+              <li>
                 <div className="container-fluid">
                   <div className="row">
-                    <div className="col-md-6 col-sm-12 col-md-offset-3 slider-text">
-                      <div className="slider-text-inner text-center">
-                        <h1>學會資源</h1>
+                    <div className="col-xs-12 col-md-offset-3 col-md-6 slider-text">
+                      <div className="slider-text-inner text-center" style={{ backgroundImage: 'url(/images/img-bg-headline.svg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
                         <h2>
-                          <span>
-                            <a href="/home">首頁</a> | 學會資源
-                          </span>
+                          <span>Resources</span>
                         </h2>
+                        <h1>學會資源</h1>
                       </div>
                     </div>
                   </div>
